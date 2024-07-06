@@ -19,7 +19,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="font-mono bg-white border-gray-200 bg-gray-900">
+        <nav className="font-mono border-gray-200 bg-gray-900 sticky top-0 z-50">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src={logo} alt="Mi3L Schools" className="w-20 h-13 flex p-0" />

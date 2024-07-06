@@ -40,7 +40,7 @@ export default function Home() {
                 </div>
             </div>
             <div className='body3 flex mt-10'>
-                <div className='relative w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75'>
+                <div onClick={() => navigate('/timeline')} className='relative w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75'>
                     <img src={im1} className='w-full rounded-lg blur-sm object-cover h-96' alt='' />
                     <div className='font-bold absolute inset-0 flex items-center justify-center z-40 text-white text-4xl'>
                         Blog Posts
@@ -52,12 +52,21 @@ export default function Home() {
                         Our Courses
                     </div>
                 </div>
-                <div className='relative w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75'>
+                <div onClick={()=> navigate('/teams')} className='relative w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75'>
                     <img src={im3} className='w-full rounded-lg blur-sm object-cover h-96' alt='' />
                     <div className='font-bold absolute inset-0 flex items-center justify-center z-40 text-white text-4xl'>
                         Our Team
                     </div>
                 </div>
+            </div>
+            <div className='relative'>
+                <img src={im4} className='w-full object-cover h-96 blur-sm' alt='' />
+                <div className='absolute inset-0 flex items-center justify-center'>
+                    <div className='w-64 bg-gray-800 bg-opacity-70 p-4 rounded-lg'>
+                    <p className='text-center text-xl text-white'>"The cure for boredom is curiosity. There is no cure for curiosity."</p>
+                    </div>
+                </div>
+                <p className='absolute bottom-0 left-0 right-0 text-center text-white text-xl mb-10'>- Dorothy Parker</p>
             </div>
         </div>
     )

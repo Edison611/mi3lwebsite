@@ -1,5 +1,5 @@
 import React from 'react';
-const CourseTemplate = ({ title, description, content }) => {
+const CourseTemplate = ({ title, description, content, price }) => {
   return (
     <div className="mt-5">
       <div className="text-3xl text-center font-bold mb-5">{title} Course Schedule</div>

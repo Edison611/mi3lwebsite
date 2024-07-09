@@ -16,7 +16,7 @@ export default function Summer2024Courses() {
     ]
     return (
         <div>
-            <CourseTemplate title="Summer 2024" description={description} content={content} />
+            <CourseTemplate title="2055A Capybaras V5 Robotics Summer Course" description={description} content={content} />
         </div>
     )
 }

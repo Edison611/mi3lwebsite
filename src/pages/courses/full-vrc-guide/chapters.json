@@ -1,0 +1,22 @@
+{"chapters" : 
+    ["Getting Started",
+    "Learning Project Basics",
+    "Setting Up Drive Code",
+    "Making Autonomous Routes",
+    "Using Sensors",
+    "PID",
+    "Odometry",
+    "Using Other Libraries",
+    "Debugging"],
+"descriptions" : [
+    "Installing necessary libraries and setting up your first project",
+    "Learn the basics the PROS file structure",
+    "Learn how to set up drive code for your robot.",
+    "Learn how to make autonomous routes for your robot.",
+    "Learn how to use sensors in your robot.",
+    "Learn how to use PID in your robot.",
+    "Learn how to use odometry in your robot.",
+    "Learn how to use other libraries in your robot.",
+    "Learn how to debug your robot."
+]
+}

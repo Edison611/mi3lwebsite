@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Home.css"
-import bg from '../images/background.jpg';
+import bg from '../images/home1.png';
+import bg2 from '../images/home2.jpg';
+import bg3 from '../images/home3.png';
 import im1 from '../images/im1.png';
 import im2 from '../images/im2.png';
 import im3 from '../images/im3.png';
@@ -30,17 +32,17 @@ export default function Home() {
                     <div className='mx-10 mt-3 font-bold text-3xl'>Our Mission</div>
                     <div className='mx-10 mt-3 text-lg'>Our mission is to provide a world-class robotics education to students of all ages. We strive to provide a safe, inclusive, and fun environment for students to learn and grow.</div>
                 </div>
-                <img src={bg} className='w-1/2 mx-5 rounded-lg' alt=''></img>
+                <img src={bg2} className='w-1/2 mx-5 rounded-lg' alt=''></img>
             </div>
             <div className='body2 flex mt-10'>
-                <img src={bg} className='w-1/3 mx-5 rounded-lg' alt=''></img>
+                <img src={bg3} className='w-1/3 mx-5 rounded-lg' alt=''></img>
                 <div className=''>
                     <div className=' mx-10 mt-3 font-bold text-3xl'>Our Values</div>
                     <div className='mx-10 mt-3 text-lg '>Our mission is to provide a world-class robotics education to students of all ages. We strive to provide a safe, inclusive, and fun environment for students to learn and grow.</div>
                 </div>
             </div>
             <div className='body3 flex mt-10'>
-                <div onClick={() => navigate('/timeline')} className='relative w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75'>
+                <div onClick={() => window.location.href = 'https://2055vrc.live/'} className='relative w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75'>
                     <img src={im1} className='w-full rounded-lg blur-sm object-cover h-96' alt='' />
                     <div className='font-bold absolute inset-0 flex items-center justify-center z-40 text-white text-4xl'>
                         Blog Posts

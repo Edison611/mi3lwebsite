@@ -13,7 +13,8 @@ import Admin from './pages/admin/Admin';
 import Createcourses from './pages/admin/CreateCourse';
 import OnlineCourses from './pages/courses/Online';
 import Intro from './pages/courses/full-vrc-guide/Intro';
-import Ch1 from './pages/courses/full-vrc-guide/Ch1';
+import Fvg1 from './pages/courses/full-vrc-guide/Fvg1.js';
+import Fvg2 from './pages/courses/full-vrc-guide/Fvg2.js';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
         <Route path="/courses/summer-2024" element={<Summer2024Courses />} />
         <Route path="/courses/online" element={<OnlineCourses />} />
         <Route path="/courses/online/full-vrc-guide" element={<Intro />} />
-        <Route path='/courses/online/full-vrc-guide/ch1' element={<Ch1 />} />
+        <Route path='/courses/online/full-vrc-guide/1' element={<Fvg1 />} />
+        <Route path='/courses/online/full-vrc-guide/2' element={<Fvg2 />} />
         <Route path="/teams/timeline" element={<Timeline />} />
         <Route path="/teams/achievements" element={<Achievements />} />
         <Route path="/contact" element={<Contact />} />

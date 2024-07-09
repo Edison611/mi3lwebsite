@@ -5,7 +5,7 @@ const { Pool } = require('pg');
 const cors = require('cors');
 
 const app = express();
-const port = 3001;
+const port = 5000;
 
 // PostgreSQL connection setup
 const pool = new Pool({
@@ -16,7 +16,7 @@ const pool = new Pool({
 app.use(cors());
 app.use(express.json());
 
-app.get('/test-db', async (req, res) => {
+app.get('/test-db', async (res) => {
     try {
         const client = await pool.connect();
         const result = await client.query('SELECT NOW() as current_time');
@@ -29,7 +29,7 @@ app.get('/test-db', async (req, res) => {
     }
 });
 
-app.get('/drop-table', async (req, res) => {
+app.get('/drop-table', async (res) => {
     try {
         await pool.query('DROP TABLE IF EXISTS summer2024course');
         res.status(200).send('Table dropped successfully');
@@ -39,33 +39,46 @@ app.get('/drop-table', async (req, res) => {
     }
 });
 
-// app.post('/del/summer2024course', async (req, res) => {
-//     const createTableQuery = `
-//         CREATE TABLE IF NOT EXISTS Summer2024Course (
-//             id SERIAL PRIMARY KEY,
-//             date VARCHAR(255) NOT NULL,
-//             description TEXT NOT NULL,
-//             teacher VARCHAR(255) NOT NULL
-//         )
-//     `;
 
-//     try {
-//         res.status(200).send('Added items successfully');
-//     } catch (err) {
-//         console.error('Error initializing items:', err);
-//         res.status(500).send('Error posting item');
-//     }
-// });
-
-app.post('/add', async (req, res) => {
+app.post('/add-course', async (req, res) => {
     const createTableQuery = `
-        CREATE TABLE IF NOT EXISTS Summer2024Course (
+        CREATE TABLE IF NOT EXISTS courses (
+            course_id SERIAL PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            price INT NOT NULL,
+            price_for_lesson INT NOT NULL,
+            ongoing BOOLEAN
+        )
+    `;
+
+    try {
+        // Create the items table if it doesn't exist
+        await pool.query(createTableQuery);
+
+        // Insert preset items
+        item = req.body
+        console.log(item)
+        const insertItemQuery = `
+        INSERT INTO Summer2024Course (name, price, price_for_lesson, ongoing)
+        VALUES ($1, $2, $3, $4)
+        `;
+        await pool.query(insertItemQuery, [item.name, item.price, item.price_for_lesson, item.ongoing]);
+
+        res.status(200).send('Added items successfully');
+    } catch (err) {
+        console.error('Error initializing items:', err);
+        res.status(500).send('Error posting item');
+    }
+});
+
+app.post('/add-lesson', async (req, res) => {
+    const createTableQuery = `
+        CREATE TABLE IF NOT EXISTS Lessons (
             id SERIAL PRIMARY KEY,
+            course_id SERIAL PRIMARY KEY,
             date VARCHAR(255) NOT NULL,
             description TEXT NOT NULL,
             teachers VARCHAR(255) NOT NULL,
-            price INT NOT NULL,
-            price_for_lesson INT NOT NULL
         )
     `;
 
@@ -89,13 +102,48 @@ app.post('/add', async (req, res) => {
     }
 });
 
-app.get('/get-lessons', async (req, res) => {
+app.get('/courses', async (req, res) => {
     const selectTableQuery = `
-        SELECT * FROM Summer2024Course
+        SELECT * FROM courses
     `;
 
     try {
-        // Create the items table if it doesn't exist
+        result = await pool.query(selectTableQuery);
+        
+        res.status(200).send(result.rows);
+    } catch (err) {
+        console.error('Error initializing items:', err);
+        res.status(500).send('Error posting item');
+    }
+});
+
+app.post('/course-lessons', async (req, res) => {
+    const course = req.body.course_id
+    const selectTableQuery = `
+        SELECT * FROM lessons WHERE course_id = ${course}
+    `;
+
+    try {
+        result = await pool.query(selectTableQuery);
+        
+        res.status(200).send(result.rows);
+    } catch (err) {
+        console.error('Error initializing items:', err);
+        res.status(500).send('Error posting item');
+    }
+});
+
+app.post('/course-info', async (req, res) => {
+    const course = req.body.course_id
+    const selectTableQuery = `
+        SELECT * FROM courses 
+        JOIN lessons ON 
+            courses.course_id = lessons.course_id
+        WHERE courses.course_id = ${course}
+        
+    `;
+
+    try {
         result = await pool.query(selectTableQuery);
         
         res.status(200).send(result.rows);

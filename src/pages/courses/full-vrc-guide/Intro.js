@@ -1,5 +1,5 @@
-import NextChapter from "../NextChapter";
-import ProgressBar from "../ProgressBar";
+import NextChapter from "../components/NextChapter";
+import ProgressBar from "../components/ProgressBar";
 import ch from './chapters.json'
 
 const Intro = () => {
@@ -9,7 +9,7 @@ const Intro = () => {
     return (
     <div>
       <ProgressBar courseName="full-vrc-guide" chapterName="Introduction" chapterNum={chapterNum} chapters={chapters} />
-      <div className="max-w-4xl mt-10 mx-auto p-6 font-mono">
+      <div className="max-w-5xl mt-10 mx-auto p-6 font-mono">
         <h1 className="text-4xl font-bold mb-8">The Full VRC Programming Guide </h1>
         <p className="text-lg leading-relaxed mb-10">Welcome to the Full VRC Programming Guide. In this course, you will learn the very basics of programming a VEX Robot all the way to some more advanced algorithms to help increase your accuracy.</p>
         <h1 className="text-3xl mt-20 mb-5">What You'll Be Learning </h1>

@@ -9,10 +9,10 @@ const Sidebar = ({ courseName, chapters, isOpen, onClose }) => {
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } transition-transform duration-300 ease-in-out bg-gray-800 text-white w-80 p-4 z-50`}
     >
-      <button onClick={onClose} className="text-right text-white">
+      <button onClick={onClose} className="text-right text-sm text-gray-300">
         Close
       </button>
-      <h2 className="text-2xl font-bold mb-4">Table of Contents</h2>
+      <h2 className="text-2xl font-bold mt-5 mb-4">Table of Contents</h2>
       <ul>
         {chapters.map((chapter, index) => (
           <li key={index} onClick={() => navigate(`/courses/online/${courseName}/${index+1}`)} className="mb-2 hover:bg-gray-600 text-md text-gray-200">

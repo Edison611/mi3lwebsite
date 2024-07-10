@@ -1,4 +1,4 @@
-import "../buttons.css"
+import "../../buttons.css"
 import TableOfContents from "./TableOfContents";
 
 const ProgressBar = ({courseName, chapterName, chapterNum, chapters, description}) => {

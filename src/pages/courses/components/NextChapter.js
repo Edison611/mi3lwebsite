@@ -1,4 +1,4 @@
-import "../buttons.css"
+import "../../buttons.css"
 import { useNavigate } from "react-router-dom";
 
 const NextChapter = ({courseName, chapterName, chapterNum, description}) => {

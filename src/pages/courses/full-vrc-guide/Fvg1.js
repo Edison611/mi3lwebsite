@@ -1,6 +1,8 @@
-import ProgressBar from "../ProgressBar";
-import NextChapter from "../NextChapter";
+import ProgressBar from "../components/ProgressBar";
+import NextChapter from "../components/NextChapter";
 import ch from './chapters.json'
+import CodeBlock from "../components/CodeBlock";
+import im1 from './images/ch1-1.png'
 
 const Fvg1 = () => {
     const chapters = ch.chapters
@@ -9,7 +11,7 @@ const Fvg1 = () => {
     return (
       <div>
         <ProgressBar courseName="full-vrc-guide" chapterName={chapters[chapterNum-1]} chapterNum={chapterNum} chapters={chapters} description={description[chapterNum-1]}/>
-          <div className="max-w-4xl mt-5 mx-auto p-6 font-mono">
+          <div className="max-w-[80vw] mt-5 mx-auto p-6 font-mono">
           
             {/* <h1 className="text-4xl font-bold text-center">{chapter} </h1> */}
             {/* <p className="text-lg leading-relaxed mb-10"></p> */}
@@ -23,6 +25,12 @@ const Fvg1 = () => {
             <p className="mt-8 text-lg leading-relaxed mb-8">After you have installed PROS and the the PROS CLI (Command-Line Interface), you will a PROS extension icon on the left. Click that extension and click "Create Project"</p>
             <img className="mx-auto" src="https://cdn.discordapp.com/attachments/1115014592595230741/1260046099654250616/image.png?ex=668de4e0&is=668c9360&hm=b0e4a8c4b63a71bdc1732a03bf8f9f9beeb266fed8668489b009d2091b6363de&" alt=""></img>
             <p className="mt-8 text-lg leading-relaxed mb-3">Follow the instructions on VSCode and make sure you choose a file location where you will remember. You should select v5 and the latest version if it prompts you to. </p>
+            <h1 className="text-3xl mt-10 mb-5 font-bold">Alternative Way </h1>
+            <p className="mt-8 text-lg leading-relaxed mb-3">Alternatively, if that method does not work for whatever reason, you can use the terminal to create a new project. Only use this method if you are more advanced or the method above does not work. Start by making an empty folder, then open a new PROS Temrminal under that folder and run the following command: </p>
+            <CodeBlock language="powershell" codeString={"pros c new-project ./ v5 3.8"} showLineNumbers={false}></CodeBlock>
+            <p className="mt-8 text-lg leading-relaxed mb-3">You should get the same result from either method. Your folder structure should look something like this: </p>
+            <img className="mx-auto" src={im1} alt=""></img>
+            <p className="mt-8 text-lg leading-relaxed mb-3">We'll go over what's in each of these folders in the next lesson so don't let all these files overwhelm you.</p>
         </div>
         <hr className="text-center max-w-4xl border-t-4 border-gray-900 mx-auto"></hr>
 

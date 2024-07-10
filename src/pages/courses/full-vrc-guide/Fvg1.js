@@ -31,6 +31,15 @@ const Fvg1 = () => {
             <p className="mt-8 text-lg leading-relaxed mb-3">You should get the same result from either method. Your folder structure should look something like this: </p>
             <img className="mx-auto" src={im1} alt=""></img>
             <p className="mt-8 text-lg leading-relaxed mb-3">We'll go over what's in each of these folders in the next lesson so don't let all these files overwhelm you.</p>
+            <h1 className="text-3xl mt-10 mb-5 font-bold">Building & Uploading Code</h1>
+            <p className="mt-8 text-lg leading-relaxed mb-3">The first time you upload new code to a Brain, we recommend that you plug it directly into the Brain, any other time, plug it into the controller.</p>
+            <p className="mt-8 text-lg leading-relaxed mt-3">To build a project, run the following command:</p>
+            <CodeBlock language="powershell" codeString={"pros build"}></CodeBlock>
+            <p className="mt-8 text-lg leading-relaxed mt-3">To upload a project, run the following command:</p>
+            <CodeBlock language="powershell" codeString={"pros upload"}></CodeBlock>
+            <p className="mt-8 text-lg leading-relaxed mt-3">To build and upload a project, run the following command:</p>
+            <CodeBlock language="powershell" codeString={"pros mu"}></CodeBlock>
+            <p className="mt-8 text-lg leading-relaxed mt-3">Remember that everytime you make a change to your code, you are going to have to build and upload it for your changes to be there.</p>
         </div>
         <hr className="text-center max-w-4xl border-t-4 border-gray-900 mx-auto"></hr>
 

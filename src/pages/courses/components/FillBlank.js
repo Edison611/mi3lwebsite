@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FillBlank = ({ question, answer }) => {
+const FillBlank = ({ question, answer,  }) => {
   const [userAnswer, setUserAnswer] = useState('');
   const [isCorrect, setIsCorrect] = useState(null);
 
@@ -22,6 +22,7 @@ const FillBlank = ({ question, answer }) => {
       <div className="mb-4">
         <label className="block text-lg mb-2">{question}</label>
         <input
+
           type="text"
           value={userAnswer}
           onChange={handleChange}

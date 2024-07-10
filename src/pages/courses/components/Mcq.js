@@ -11,6 +11,7 @@ const Mcq = ({ question, options, correctAnswer }) => {
 
   return (
     <div className="mt-10 max-w-md mx-auto p-4 bg-gray-900 text-white rounded-md shadow-md">
+      <div className='text-2xl text-center font-bold mb-5'>Test Your Knowledge</div>
       <div className="mb-4">
         <label className="block text-lg mb-2">{question}</label>
         {options.map((option, index) => (

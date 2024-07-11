@@ -20,6 +20,7 @@ import Fvg3 from './pages/courses/full-vrc-guide/Fvg3.js';
 import Fvg4 from './pages/courses/full-vrc-guide/Fvg4.js';
 import Fvg5 from './pages/courses/full-vrc-guide/Fvg5.js';
 import Fvg6 from './pages/courses/full-vrc-guide/Fvg6.js';
+import Fvg7 from './pages/courses/full-vrc-guide/Fvg7.js';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path='/courses/online/full-vrc-guide/4' element={<Fvg4 />} />
         <Route path='/courses/online/full-vrc-guide/5' element={<Fvg5 />} />
         <Route path='/courses/online/full-vrc-guide/6' element={<Fvg6 />} />
+        <Route path='/courses/online/full-vrc-guide/7' element={<Fvg7 />} />
         <Route path="/teams/timeline" element={<Timeline />} />
         <Route path="/teams/achievements" element={<Achievements />} />
         <Route path="/contact" element={<Contact />} />

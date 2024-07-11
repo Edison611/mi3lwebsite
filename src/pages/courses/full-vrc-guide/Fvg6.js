@@ -2,7 +2,6 @@ import ProgressBar from "../components/ProgressBar";
 import NextChapter from "../components/NextChapter";
 import ch from './chapters.json';
 import CodeBlock from "../components/CodeBlock";
-import FillBlank from "../components/FillBlank";
 import Mcq from "../components/Mcq";
 // import im1 from './images/ch6-1.png'; 
 import Activity from "../components/Activity";
@@ -23,15 +22,15 @@ const Fvg6 = () => {
             
             <h2 className="text-2xl mt-5 mb-5 font-bold">Proportional Term (P)</h2>
             <p className="text-lg leading-relaxed">The proportional term produces an output value that is proportional to the current error value. The proportional response can be adjusted by multiplying the error by a constant K<sub>P</sub>, called the proportional gain.</p>
-            <CodeBlock codeString={`output = Kp * error;`} language="cpp"/>
+            <CodeBlock codeString={`output = kP * error;`} language="cpp"/>
 
             <h2 className="text-2xl mt-8 mb-5 font-bold">Integral Term (I)</h2>
             <p className="text-lg leading-relaxed">The integral term is concerned with the accumulation of past errors. If the error has been present for a long time, the integral term will increase the output to eliminate the error. This can help to reduce steady-state error.</p>
-            <CodeBlock codeString={`integral += error; \noutput += Ki * integral;`} language="cpp"/>
+            <CodeBlock codeString={`integral += error; \noutput += kI * integral;`} language="cpp"/>
 
             <h2 className="text-2xl mt-8 mb-5 font-bold">Derivative Term (D)</h2>
             <p className="text-lg leading-relaxed">The derivative term is a prediction of future error, based on its rate of change. It provides a dampening effect, reducing the likelihood of overshoot and oscillations.</p>
-            <CodeBlock codeString={`derivative = error - previousError; \noutput += Kd * derivative;`} language="cpp"/>
+            <CodeBlock codeString={`derivative = error - previousError; \noutput += kD * derivative;`} language="cpp"/>
 
             <h2 className="text-2xl mt-8 mb-5 font-bold">Combining P, I, and D</h2>
             <p className="text-lg leading-relaxed">The final PID control output is the sum of the proportional, integral, and derivative terms:</p>
@@ -40,7 +39,7 @@ const Fvg6 = () => {
     double error = target - measured_value;
     integral += error * deltaTime; // integral will be a global variable
     double derivative = error - previous_error;
-    double output = kP * error + kI * integral + kI * derivative; 
+    double output = kP * error + kI * integral + kD * derivative; 
     previous_error = error;
     return output;
 }`
@@ -78,7 +77,7 @@ void drive_straight(double distance) {
     while (abs(error) > tolerance) {
         double current_position = motors.get_position();
 
-        double error = distance - current_position;
+        error = distance - current_position;
         double derivative = error - previous_error;
 
         double output = (kP * error) + (kD * derivative);
@@ -113,7 +112,7 @@ void turn(double degrees) {
     while (abs(error) > tolerance) {
         double current_degrees = inertial_sensor.get_heading();
 
-        double error = distance - current_position;
+        error = degrees - current_degrees;
         double derivative = error - previous_error;
         
         double output = (kP * error) + (kD * derivative);

@@ -45,7 +45,7 @@ void initialize() {
             <p className="text-lg leading-relaxed mt-4">To set the position of an inertial sensor, you can use the following code as an example:</p>
             <CodeBlock codeString={`inertial_sensor.set_heading(90); // Sets the heading to 90 degrees`} language="cpp"/>
             <Activity 
-              question="Create a new function: void turn(int degrees), make your robot to turn to this specific amount of degrees using the inertial sensor and then make it stop moving once it is there. Assume your robot starts facing 0 degrees."
+              question="Create a new function: void turn(int degrees), make your robot turn to this specific amount of degrees using the inertial sensor and then make it stop moving once it is there. Assume your robot starts facing 0 degrees."
               answer={
     `void turn(int degrees) {
     while (inertial_sensor.get_heading() < degrees) {
@@ -98,7 +98,7 @@ motor.tare_position(); // Reset the encoder value to zero`
             } language="cpp"/>
             
             <Activity 
-              question="Create a function that makes the robot move forward for 24 inches (1 tile) and then stop using the average of your motor encoders. Assume that your robot has a wheel diameter of 3 inches. BONUS: Make it so that the code can work for any wheel diameter and travel any distance by making them parameters or variables that you can change."
+              question="Create a function that makes the robot move forward for 24 inches (1 tile) and then stop. Use the average of your motor encoders. Assume that your robot has a wheel diameter of 3 inches. BONUS: Make it so that the code can work for any wheel diameter and travel any distance by making them parameters or variables that you can change."
               answer={
     `// Pseudo-Code
 double wheelDiameter = 3.0; // Diameter of the wheel in inches that you can modify

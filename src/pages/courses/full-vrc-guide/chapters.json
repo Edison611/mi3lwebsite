@@ -5,10 +5,12 @@
     "Making Simple Autonomous Routes",
     "Using Sensors",
     "PID",
+    "Debugging and Tasks",
     "Odometry",
     "Using Other Libraries",
-    "Collaborating With Others & Version Control",
-    "Debugging"],
+    "Pneumatics",
+    "Collaborating With Others & Version Control"
+    ],
 "descriptions" : [
     "Installing necessary libraries and setting up your first project",
     "Learn the basics the PROS file structure",
@@ -16,9 +18,10 @@
     "Learn how to make autonomous routes for your robot.",
     "Increase the precision of your robot's actions",
     "Making efficient and accurate movements with PID",
+    "Fixing your mistakes in an efficient way.",
     "Adding a coordinate system to your robot.",
     "Implementing other ibraries in your robot.",
-    "Learn how to use Github to share your code with others",
-    "Learn how to debug your robot."
+    "Using pneumatics to your advantage.",
+    "Learn how to use Github to share your code with others"
 ]
 }

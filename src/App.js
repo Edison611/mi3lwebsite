@@ -37,7 +37,7 @@ function App() {
         <Route path='/courses/online/full-vrc-guide/3' element={<Fvg3 />} />
         <Route path='/courses/online/full-vrc-guide/4' element={<Fvg4 />} />
         <Route path='/courses/online/full-vrc-guide/5' element={<Fvg5 />} />
-        {/* <Route path='/courses/online/full-vrc-guide/6' element={<Fvg6 />} /> */}
+        <Route path='/courses/online/full-vrc-guide/6' element={<Fvg6 />} />
         <Route path="/teams/timeline" element={<Timeline />} />
         <Route path="/teams/achievements" element={<Achievements />} />
         <Route path="/contact" element={<Contact />} />

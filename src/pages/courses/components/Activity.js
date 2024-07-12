@@ -14,12 +14,13 @@ const Activity = ({ question, language="cpp", answer }) => {
     <div className="mb-4">
         <label className="block text-lg mb-2">{question}</label>
     </div>
+    {answer &&
     <button
         onClick={handleCheckAnswer}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     >
         Show Answer
-    </button>
+    </button>}
     {showAnswer !== false && (
         <CodeBlock language={language} codeString={answer}/>
     )}

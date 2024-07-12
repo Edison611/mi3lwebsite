@@ -2,8 +2,6 @@ import ProgressBar from "../components/ProgressBar";
 import NextChapter from "../components/NextChapter";
 import ch from './chapters.json';
 import CodeBlock from "../components/CodeBlock";
-import FillBlank from "../components/FillBlank";
-import Mcq from "../components/Mcq";
 import Activity from "../components/Activity";
 // import im1 from './images/ch7-1.png'; 
 

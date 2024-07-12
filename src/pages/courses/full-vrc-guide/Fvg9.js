@@ -1,8 +1,6 @@
 import ProgressBar from "../components/ProgressBar";
 import NextChapter from "../components/NextChapter";
 import ch from './chapters.json';
-import CodeBlock from "../components/CodeBlock";
-import Mcq from "../components/Mcq";
 import Activity from "../components/Activity";
 // import im1 from './images/ch8-1.png'; 
 

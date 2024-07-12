@@ -2,7 +2,6 @@ import ProgressBar from "../components/ProgressBar";
 import NextChapter from "../components/NextChapter";
 import ch from './chapters.json'
 import CodeBlock from "../components/CodeBlock";
-import FillBlank from "../components/FillBlank";
 import Activity from "../components/Activity";
 import im1 from './images/ch3-1.png'; 
 
@@ -49,7 +48,46 @@ const Fvg3 = () => {
 }`
               }
             />
+            <h1 className="text-3xl mb-5 font-bold">Adding Other Subsystems</h1>
+            <p className="text-lg leading-relaxed mb-8">It is very common for you to not have all 8 motors used for driving. All of your other subsystems will be defined very similarily to your drive code.</p>
+            <p className="text-lg leading-relaxed ">Let's say you want to code an intake. When the driver holds the R1 button: it intakes. When they hold the R2 button: it outtakes. Here is some sample code for that.</p>
+            <CodeBlock codeString={
+`pros::Motor intake(1);
+
+void intakeControl() {
+    if (master.get_digital(DIGITAL_R1)) {
+        intake.move(127);
+    } else if (master.get_digital(DIGITAL_R2)) {
+        intake.move(-127);
+    } else {
+        intake.move(0);
+    }
+}
+// OR 
+
+void intakeControl() {
+    int intake_power = 127 * (master.get_digital(pros::E_CONTROLLER_DIGITAL_R1) - master.get_digital(pros::E_CONTROLLER_DIGITAL_R2));
+    intake.move(intake_power);
+}` } language="cpp"/>
+        <p className="text-lg leading-relaxed mb-8">Note that the .get_digital is used when you hold down a button</p>
+        <p className="text-lg leading-relaxed ">There is another case where you may need to press the button multiple times. Let's say you wanted to activate your catapult when you press 'B' and let it continue to shoot until you press 'B' again. Here is some sample code for that: </p>
+        <CodeBlock codeString={
+`pros::Motor catapult(10);
+bool current_state = false;
+
+void intakeControl() {
+    if (master.get_digital_new_press(B)) {
+        current_state = !current_state;
+    }
+    if (current_state) {
+        catapult.move(127);
+    } else {
+        catapult.move(0);
+    }
+
+}` } language="cpp"/>
         </div>
+        
         <hr className="text-center max-w-4xl border-t-4 border-gray-900 mx-auto mb-5"></hr>
         <NextChapter courseName="full-vrc-guide" chapterName={chapters[chapterNum]} chapterNum={chapterNum+1} description={description[chapterNum]}/>
       </div>

@@ -94,7 +94,7 @@ int kickerTask() {
         }
 
         if (cata_shoot == true) {
-            pros::lcd::set_text(2, "Shoot");
+            pros::lcd::set_text(2, "Shoot');
             cata_shoot = false;
             Catapult.move_velocity(200);
             stop = true;
@@ -129,7 +129,7 @@ void kickerTask() { // int -> void
         }
 
         if (cata_shoot == true) {
-            pros::lcd::set_text(2, "Shoot");
+            pros::lcd::set_text(2, "Shoot"); // ' -> "
             cata_shoot = false;
             catapult.move_velocity(200); // Catapult -> catapult
             stop = true;

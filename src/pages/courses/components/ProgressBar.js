@@ -4,7 +4,7 @@ import TableOfContents from "./TableOfContents";
 const ProgressBar = ({courseName, chapterName, chapterNum, chapters, description}) => {
     
     return (
-        <div className="z-50 font-mono mt-10 rounded-full max-w-5xl mx-auto p-6 bg-gray-900 rounded-lg shadow-md flex justify-between items-center">
+        <div className="z-50 font-mono mt-10 rounded-full w-[85vw] mx-auto p-6 bg-gray-900 rounded-lg shadow-md flex justify-between items-center">
             <div className="flex items-center">
                 <TableOfContents courseName={courseName} chapters={chapters} />
                 <div className="ml-5 flex flex-col">

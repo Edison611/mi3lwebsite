@@ -75,7 +75,7 @@ const Fvg4 = () => {
     setDrive(127, 127); // Move forward at full power
     pros::delay(500); // Wait for 0.5 seconds
 
-    setDrive(60, -60); // Turn left at ~half power
+    setDrive(-60, 60); // Turn left at ~half power
     pros::delay(1500); // Wait for 1.5 seconds
 
     setDrive(90, 90); // Move forward at 70% power

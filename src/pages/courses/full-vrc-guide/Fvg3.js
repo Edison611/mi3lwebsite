@@ -75,8 +75,8 @@ void intakeControl() {
 `pros::Motor catapult(10);
 bool current_state = false;
 
-void intakeControl() {
-    if (master.get_digital_new_press(B)) {
+void catapultControl() {
+    if (master.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)) {
         current_state = !current_state;
     }
     if (current_state) {

@@ -187,10 +187,10 @@ const Fvg2 = () => {
 
 // globals.cpp
 #include "main.h"
-pros::Motor driveLB(1, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_DEGREES);
-pros::Motor driveLF(2, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_DEGREES);
-pros::Motor driveRB(3, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_DEGREES);
-pros::Motor driveLF(4, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_DEGREES);
+pros::Motor driveLB(1, pros::v5::MotorGears::blue);
+pros::Motor driveLF(2, pros::v5::MotorGears::blue);
+pros::Motor driveRB(3, pros::v5::MotorGears::blue);
+pros::Motor driveRF(4, pros::v5::MotorGears::blue);
 
 pros::Controller master(pros::E_CONTROLLER_MASTER);
 // ------------------
@@ -199,7 +199,7 @@ pros::Controller master(pros::E_CONTROLLER_MASTER);
 extern pros::Motor driveLB;
 extern pros::Motor driveLF;
 extern pros::Motor driveRB;
-extern pros::Motor driveLF;
+extern pros::Motor driveRF;
 
 extern pros::Controller master;
 // ------------------

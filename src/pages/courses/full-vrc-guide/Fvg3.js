@@ -41,15 +41,15 @@ const Fvg3 = () => {
         turn = 0;
     }
     
-    int leftPower = power - turn;
-    int rightPower = power + turn; 
+    int leftPower = power + turn;
+    int rightPower = power - turn; 
     
     driveL.move(leftPower);
     driveR.move(rightPower);
 }`
               }
             />
-            <h1 className="text-3xl mb-5 font-bold">Adding Other Subsystems</h1>
+            <h1 className="text-3xl mt-10 mb-5 font-bold">Adding Other Subsystems</h1>
             <p className="text-lg leading-relaxed mb-8">It is very common for you to not have all 8 motors used for driving. All of your other subsystems will be defined very similarily to your drive code.</p>
             <p className="text-lg leading-relaxed ">Let's say you want to code an intake. When the driver holds the R1 button: it intakes. When they hold the R2 button: it outtakes. Here is some sample code for that.</p>
             <CodeBlock codeString={

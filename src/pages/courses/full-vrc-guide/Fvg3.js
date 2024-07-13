@@ -21,6 +21,7 @@ const Fvg3 = () => {
                 <li className="text-lg leading-relaxed">Perform Any Tuning refers to adjusting your controller's sensitivity or adding a deadband (more on this later)</li>
                 <li className="text-lg leading-relaxed">Power refers to the joystick movement in the y-direction</li>
                 <li className="text-lg leading-relaxed">Turn refers to the joystick movement in the x-direction </li>
+                <li className="text-lg leading-relaxed">Note that the power + turn and power - turn can be swapped sometimes.</li>
             </ul>
             <p className="text-lg leading-relaxed mt-8">To give full power to a motor, you can do the following: </p>
             <CodeBlock codeString={`motor.move(127);`} language="cpp"/>
@@ -40,8 +41,8 @@ const Fvg3 = () => {
         turn = 0;
     }
     
-    int leftPower = forward + turn;
-    int rightPower = forward - turn; 
+    int leftPower = power - turn;
+    int rightPower = power + turn; 
     
     driveL.move(leftPower);
     driveR.move(rightPower);

@@ -7,7 +7,6 @@ import im2 from './images/ch2-2.png'
 import im3 from './images/ch2-3.png'
 import FillBlank from "../components/FillBlank";
 import Activity from "../components/Activity";
-import Mcq from "../components/Mcq";
 
 const Fvg2 = () => {
     const chapters = ch.chapters

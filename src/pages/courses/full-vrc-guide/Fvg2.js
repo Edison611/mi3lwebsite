@@ -202,7 +202,7 @@ extern pros::Motor driveLF;
 extern pros::Motor driveRB;
 extern pros::Motor driveLF;
 
-pros::Controller master;
+extern pros::Controller master;
 // ------------------
 
 // main.h

@@ -5,7 +5,7 @@ const Sidebar = ({ courseName, chapters, isOpen, onClose }) => {
   const navigate = useNavigate();
   return (
     <div
-      className={`fixed inset-0 transform ${
+      className={`overflow-scroll fixed inset-0 transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } transition-transform duration-300 ease-in-out bg-gray-800 text-white w-80 p-4 z-50`}
     >

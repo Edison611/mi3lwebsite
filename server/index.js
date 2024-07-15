@@ -1,11 +1,13 @@
 require('dotenv').config(); // This loads environment variables from .env into process.env
 
+// console.log(process.env)
+
 const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 
 const app = express();
-const port = 5000;
+// const port = 5000;
 
 // PostgreSQL connection setup
 const pool = new Pool({
@@ -16,7 +18,16 @@ const pool = new Pool({
 app.use(cors());
 app.use(express.json());
 
-app.get('/test-db', async (res) => {
+app.get('/', async (req, res) => {
+    try {
+        res.send(`Connected to Backend`);
+    } catch (err) {
+        console.error('Error connecting to backend', err);
+        res.status(500).send('Error connecting to backend');
+    }
+});
+
+app.get('/test-db', async (req, res) => {
     try {
         const client = await pool.connect();
         const result = await client.query('SELECT NOW() as current_time');
@@ -29,7 +40,7 @@ app.get('/test-db', async (res) => {
     }
 });
 
-app.get('/drop-table', async (res) => {
+app.get('/drop-table', async (req, res) => {
     try {
         await pool.query('DROP TABLE IF EXISTS summer2024course');
         res.status(200).send('Table dropped successfully');
@@ -153,6 +164,8 @@ app.post('/course-info', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is running on http://localhost:${port}`);
+// });
+
+module.exports = app;

@@ -19,18 +19,19 @@ export default function Home() {
                     <div className="hero-content">
                         
                     <button className="button-learn-more text-4xl absolute top-10 md:relative md:bottom-70">
-                        Learn More!
+                        <a href='#mi3l'>Learn More!</a>
                     </button>
                     </div>
                 </div>
                 
             </div>
-            <div className='text-center mt-10 text-4xl font-bold'>My Life Long Learning</div>
+            <div id='mi3l' className='text-center mt-10 text-4xl font-bold'>My Life Long Learning</div>
             <div className='text-center mt-3 text-xl'>Join our World Class VEX Robotics Team Today!</div>
             <div className='body1 flex mt-10'>
                 <div>
                     <div className='mx-10 mt-3 font-bold text-3xl'>Our Mission</div>
-                    <div className='mx-10 mt-3 text-lg'>Our mission is to provide a world-class robotics education to students of all ages. We strive to provide a safe, inclusive, and fun environment for students to learn and grow.</div>
+                    <div className='ml-10 mr-2 mt-3 text-lg'>
+                    Our mission is to provide a world-class robotics education to students of all ages. We strive to provide a safe, inclusive, and fun environment for students to learn and grow. Our goal is to inspire curiosity, creativity, and a lifelong passion for technology and innovation. Through hands-on learning and collaborative projects, we aim to equip students with the critical thinking, problem-solving, and teamwork skills necessary for success. </div>
                 </div>
                 <img src={bg2} className='w-1/2 mx-5 rounded-lg' alt=''></img>
             </div>
@@ -38,7 +39,7 @@ export default function Home() {
                 <img src={bg3} className='w-1/3 mx-5 rounded-lg' alt=''></img>
                 <div className=''>
                     <div className=' mx-10 mt-3 font-bold text-3xl'>Our Values</div>
-                    <div className='mx-10 mt-3 text-lg '>Our mission is to provide a world-class robotics education to students of all ages. We strive to provide a safe, inclusive, and fun environment for students to learn and grow.</div>
+                    <div className='mx-10 mt-3 text-lg '>Our values embrace inclusivity and diversity, ensuring our programs are accessible and welcoming to all students, regardless of background or ability Collaboration and teamwork are paramount, fostering mutual respect and the value of working together towards common goals. Upholding the highest standards of integrity and respect, we ensure all community interactions are conducted with honesty and kindness. Finally, we strive to empower our students, building their confidence and equipping them with the skills necessary for success.</div>
                 </div>
             </div>
             <div className='body3 flex mt-10'>

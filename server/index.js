@@ -7,7 +7,7 @@ const { Pool } = require('pg');
 const cors = require('cors');
 
 const app = express();
-// const port = 5000;
+const port = 5000;
 
 // PostgreSQL connection setup
 const pool = new Pool({
@@ -42,7 +42,7 @@ app.get('/test-db', async (req, res) => {
 
 app.get('/drop-table', async (req, res) => {
     try {
-        await pool.query('DROP TABLE IF EXISTS summer2024course');
+        await pool.query('DROP TABLE IF EXISTS courses');
         res.status(200).send('Table dropped successfully');
     } catch (err) {
         console.error('Error dropping table:', err);
@@ -58,7 +58,7 @@ app.post('/add-course', async (req, res) => {
             name VARCHAR(255) NOT NULL,
             price INT NOT NULL,
             price_for_lesson INT NOT NULL,
-            ongoing BOOLEAN
+            active BOOLEAN
         )
     `;
 
@@ -70,7 +70,7 @@ app.post('/add-course', async (req, res) => {
         item = req.body
         console.log(item)
         const insertItemQuery = `
-        INSERT INTO Summer2024Course (name, price, price_for_lesson, ongoing)
+        INSERT INTO courses (name, price, price_for_lesson, active)
         VALUES ($1, $2, $3, $4)
         `;
         await pool.query(insertItemQuery, [item.name, item.price, item.price_for_lesson, item.ongoing]);
@@ -84,12 +84,12 @@ app.post('/add-course', async (req, res) => {
 
 app.post('/add-lesson', async (req, res) => {
     const createTableQuery = `
-        CREATE TABLE IF NOT EXISTS Lessons (
+        CREATE TABLE IF NOT EXISTS lessons (
             id SERIAL PRIMARY KEY,
-            course_id SERIAL PRIMARY KEY,
-            date VARCHAR(255) NOT NULL,
+            course_id INT NOT NULL,
+            date DATE NOT NULL,
             description TEXT NOT NULL,
-            teachers VARCHAR(255) NOT NULL,
+            teachers VARCHAR(255) NOT NULL
         )
     `;
 
@@ -101,10 +101,10 @@ app.post('/add-lesson', async (req, res) => {
         item = req.body
         console.log(item)
         const insertItemQuery = `
-        INSERT INTO Summer2024Course (date, description, teachers, price, price_for_lesson)
-        VALUES ($1, $2, $3, $4, $5)
+        INSERT INTO lessons (course_id, date, description, teachers)
+        VALUES ($1, $2, $3, $4)
         `;
-        await pool.query(insertItemQuery, [item.date, item.description, item.teachers, item.price, item.price_for_lesson]);
+        await pool.query(insertItemQuery, [item.course_id, item.date, item.description, item.teachers]);
 
         res.status(200).send('Added items successfully');
     } catch (err) {
@@ -151,7 +151,7 @@ app.post('/course-info', async (req, res) => {
         JOIN lessons ON 
             courses.course_id = lessons.course_id
         WHERE courses.course_id = ${course}
-        
+        ORDER BY date ASC
     `;
 
     try {
@@ -164,8 +164,23 @@ app.post('/course-info', async (req, res) => {
     }
 });
 
-// app.listen(port, () => {
-//     console.log(`Server is running on http://localhost:${port}`);
-// });
+app.post('/delete-lesson', async (req, res) => {
+    const lesson = req.body.lesson_id
+    const selectTableQuery = `
+        DELETE FROM lessons WHERE id = ${lesson}
+    `;
 
-module.exports = app;
+    try {
+        result = await pool.query(selectTableQuery);
+        res.status(200).send("Row Successfully Deleted");
+    } catch (err) {
+        console.error('Error deleting item:', err);
+        res.status(500).send('Error deleting item');
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+// module.exports = app;

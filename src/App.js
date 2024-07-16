@@ -27,6 +27,7 @@ import Fvg10 from './pages/courses/full-vrc-guide/Fvg10.js';
 import Fvg11 from './pages/courses/full-vrc-guide/Fvg11.js';
 import Teams from './pages/teams/Teams.js';
 import Login from './pages/login/Login.js';
+import Profile from './pages/login/Profile.js';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path='/courses/online/full-vrc-guide/10' element={<Fvg10 />} />
         <Route path='/courses/online/full-vrc-guide/11' element={<Fvg11 />} />
         <Route path='/login' element={<Login/> }/>
+        <Route path='/profile' element={<Profile/> }/>
         <Route path="/teams" element={<Teams />} />
         <Route path="/teams/timeline" element={<Timeline />} />
         <Route path="/teams/achievements" element={<Achievements />} />

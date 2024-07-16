@@ -14,11 +14,11 @@ function Login() {
     };
     return (
         <div>
-            <h2>React Google Login</h2>
+            <h2>Coming Soon!</h2>
             <br />
             <br />
-            {!loggedIn && <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />}
-            {loggedIn && <h2>Logged In</h2>}
+            {/* {!loggedIn && <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />}
+            {loggedIn && <h2>Logged In</h2>} */}
         </div>
     )
 }

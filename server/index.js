@@ -1,6 +1,6 @@
 require('dotenv').config(); // This loads environment variables from .env into process.env
 
-// console.log(process.env)
+console.log(process.env)
 
 const express = require('express');
 const { Pool } = require('pg');
@@ -176,6 +176,54 @@ app.post('/delete-lesson', async (req, res) => {
     } catch (err) {
         console.error('Error deleting item:', err);
         res.status(500).send('Error deleting item');
+    }
+});
+
+app.post('/add-user', async (req, res) => {
+    const user = req.body
+    const createTableQuery = `
+        CREATE TABLE IF NOT EXISTS users (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            admin BOOL DEFAULT FALSE
+        )
+    `;
+
+    const query = `
+        INSERT INTO users (name, email, admin)
+        VALUES ($1, $2, $3)
+    `
+
+    try {
+        await pool.query(createTableQuery);
+        result = await pool.query(query, [user.name, user.email, true]);
+        res.status(200).send("Added user successfully");
+    } catch (err) {
+        console.error('Error verifying admin:', err);
+        res.status(500).send('Error verifying admin');
+    }
+});
+
+app.post('/verify-admin', async (req, res) => {
+    const email = req.body.email
+
+    const query = `
+        SELECT * FROM users WHERE email = ${email}
+    `;
+
+    try {
+        result = await pool.query(query);
+        if (!result) {
+            res.status(200).send(false)
+        }
+        if (result.rows[0].admin) {
+            res.status(200).send(true);
+        }
+        res.status(200).send(false);
+    } catch (err) {
+        console.error('Error verifying admin:', err);
+        res.status(500).send('Error verifying admin');
     }
 });
 

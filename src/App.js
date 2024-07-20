@@ -28,39 +28,43 @@ import Fvg11 from './pages/courses/full-vrc-guide/Fvg11.js';
 import Teams from './pages/teams/Teams.js';
 import Login from './pages/login/Login.js';
 import Profile from './pages/login/Profile.js';
+import { UserProvider } from './components/UserContext.jsx';
 
 function App() {
   return (
     <div className="">
+      
       <ScrollToTop />
+      <UserProvider>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/courses/summer-2024" element={<Summer2024Courses />} />
-        <Route path="/courses/online" element={<OnlineCourses />} />
-        <Route path="/courses/online/full-vrc-guide" element={<Intro />} />
-        <Route path='/courses/online/full-vrc-guide/1' element={<Fvg1 />} />
-        <Route path='/courses/online/full-vrc-guide/2' element={<Fvg2 />} />
-        <Route path='/courses/online/full-vrc-guide/3' element={<Fvg3 />} />
-        <Route path='/courses/online/full-vrc-guide/4' element={<Fvg4 />} />
-        <Route path='/courses/online/full-vrc-guide/5' element={<Fvg5 />} />
-        <Route path='/courses/online/full-vrc-guide/6' element={<Fvg6 />} />
-        <Route path='/courses/online/full-vrc-guide/7' element={<Fvg7 />} />
-        <Route path='/courses/online/full-vrc-guide/8' element={<Fvg8 />} />
-        <Route path='/courses/online/full-vrc-guide/9' element={<Fvg9 />} />
-        <Route path='/courses/online/full-vrc-guide/10' element={<Fvg10 />} />
-        <Route path='/courses/online/full-vrc-guide/11' element={<Fvg11 />} />
-        <Route path='/login' element={<Login/> }/>
-        <Route path='/profile' element={<Profile/> }/>
-        <Route path="/teams" element={<Teams />} />
-        <Route path="/teams/timeline" element={<Timeline />} />
-        <Route path="/teams/achievements" element={<Achievements />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/store" element={<Shop />} />
-        <Route path='/admin' element={<Admin />} />
-        <Route path='/admin/createcourse' element={<Createcourses />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/summer-2024" element={<Summer2024Courses />} />
+          <Route path="/courses/online" element={<OnlineCourses />} />
+          <Route path="/courses/online/full-vrc-guide" element={<Intro />} />
+          <Route path='/courses/online/full-vrc-guide/1' element={<Fvg1 />} />
+          <Route path='/courses/online/full-vrc-guide/2' element={<Fvg2 />} />
+          <Route path='/courses/online/full-vrc-guide/3' element={<Fvg3 />} />
+          <Route path='/courses/online/full-vrc-guide/4' element={<Fvg4 />} />
+          <Route path='/courses/online/full-vrc-guide/5' element={<Fvg5 />} />
+          <Route path='/courses/online/full-vrc-guide/6' element={<Fvg6 />} />
+          <Route path='/courses/online/full-vrc-guide/7' element={<Fvg7 />} />
+          <Route path='/courses/online/full-vrc-guide/8' element={<Fvg8 />} />
+          <Route path='/courses/online/full-vrc-guide/9' element={<Fvg9 />} />
+          <Route path='/courses/online/full-vrc-guide/10' element={<Fvg10 />} />
+          <Route path='/courses/online/full-vrc-guide/11' element={<Fvg11 />} />
+          <Route path='/login' element={<Login/> }/>
+          <Route path='/profile' element={<Profile/> }/>
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/teams/timeline" element={<Timeline />} />
+          <Route path="/teams/achievements" element={<Achievements />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/store" element={<Shop />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='/admin/createcourse' element={<Createcourses />} />
+        </Routes>
+      </UserProvider>
       <Footer />
     </div>
   );

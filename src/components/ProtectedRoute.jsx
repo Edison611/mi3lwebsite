@@ -11,7 +11,7 @@ const ProtectedRoute = ({ element: Component, ...rest }) => {
     if (!user) {
       return;
     }
-    fetch("http://localhost:5000/verify-admin", {
+    fetch("https://mi3lwebsite-api.vercel.app/verify-admin", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

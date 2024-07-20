@@ -121,7 +121,7 @@ const Createcourses = () => {
             price_for_lesson: price_for_lesson,
             ongoing: ongoing
         };
-        fetch("http://localhost:5000/add-course", {
+        fetch("https://mi3lwebsite-api.vercel.app/add-course", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -138,7 +138,7 @@ const Createcourses = () => {
     }   
 
     useEffect(() => {
-        fetch("http://localhost:5000/courses")
+        fetch("https://mi3lwebsite-api.vercel.app/courses")
             .then((response) => response.json())
             .then((data) => {
                 setCourses(data);

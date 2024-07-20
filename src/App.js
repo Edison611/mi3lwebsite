@@ -29,6 +29,7 @@ import Teams from './pages/teams/Teams.js';
 import Login from './pages/login/Login.js';
 import Profile from './pages/login/Profile.js';
 import { UserProvider } from './components/UserContext.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
 
 function App() {
   return (
@@ -61,8 +62,8 @@ function App() {
           <Route path="/teams/achievements" element={<Achievements />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Shop />} />
-          <Route path='/admin' element={<Admin />} />
-          <Route path='/admin/createcourse' element={<Createcourses />} />
+          <Route path='/admin' element={<ProtectedRoute element={<Admin />}/>} />
+          <Route path='/admin/createcourse' element={<ProtectedRoute element={<Createcourses />}/>} />
         </Routes>
       </UserProvider>
       <Footer />

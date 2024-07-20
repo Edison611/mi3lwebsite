@@ -8,11 +8,28 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const navigate = useNavigate();
   const { user, setUser } = useUser();
-  const [loggedIn, setLoggedIn] = useState(false);
+
+  function addUser(u) {
+    fetch('http://localhost:5000/add-user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(u),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
 
   const responseMessage = (response) => {
-    setUser(jwtDecode(response.credential))
-    setLoggedIn(true);
+    const userObject = jwtDecode(response.credential)
+    setUser(userObject)
+    addUser(userObject)
     navigate("/profile")
   };
 

@@ -1,6 +1,6 @@
 require('dotenv').config(); // This loads environment variables from .env into process.env
 
-console.log(process.env)
+// console.log(process.env)
 
 const express = require('express');
 const { Pool } = require('pg');
@@ -189,15 +189,21 @@ app.post('/add-user', async (req, res) => {
             admin BOOL DEFAULT FALSE
         )
     `;
-
-    const query = `
+    const query1 = `
+        SELECT * FROM users WHERE email = $1
+    `
+    const query2 = `
         INSERT INTO users (name, email, admin)
         VALUES ($1, $2, $3)
     `
-
     try {
         await pool.query(createTableQuery);
-        result = await pool.query(query, [user.name, user.email, true]);
+        let r1 = await pool.query(query1, [user.email]);
+        if (r1.rows.length > 0) {
+            res.status(200).send("User already exists");
+            return
+        }
+        result = await pool.query(query2, [user.name, user.email, false]);
         res.status(200).send("Added user successfully");
     } catch (err) {
         console.error('Error verifying admin:', err);
@@ -206,26 +212,25 @@ app.post('/add-user', async (req, res) => {
 });
 
 app.post('/verify-admin', async (req, res) => {
-    const email = req.body.email
+    const email = req.body.email;
 
     const query = `
-        SELECT * FROM users WHERE email = ${email}
+        SELECT * FROM users WHERE email = $1
     `;
 
     try {
-        result = await pool.query(query);
-        if (!result) {
-            res.status(200).send(false)
+        let result = await pool.query(query, [email]);
+        if (result.rows.length === 0) {
+            res.status(200).send(false);
+            return;
         }
-        if (result.rows[0].admin) {
-            res.status(200).send(true);
-        }
-        res.status(200).send(false);
+        res.status(200).send(result.rows[0].admin);
     } catch (err) {
         console.error('Error verifying admin:', err);
         res.status(500).send('Error verifying admin');
     }
 });
+
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

@@ -10,7 +10,7 @@ import Activity from "../components/Activity";
 const Fvg10 = () => {
     const chapters = ch.chapters;
     const description = ch.descriptions;
-    const chapterNum = 9;
+    const chapterNum = 10;
 
     return (
       <div>

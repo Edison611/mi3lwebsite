@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CourseTemplate from "./CourseTemplate";
 
 export default function Summer2024Courses() {
+    const [loading, setLoading] = useState(true);
     const [content, setContent] = useState([]);
     const description = "This is a course for students who want to learn about robotics and programming. Students will learn how to build and program robots using VEX Robotics kits. The course will cover topics such as mechanical design, programming, and problem-solving where students will work in teams to design, build, and program robots to complete various challenges to help students develop their skills and most importantly have fun! Classes are from 1PM - 4PM at 130 Aintree Terrace, Oakville, ON. "
     useEffect (() => {
@@ -16,12 +17,19 @@ export default function Summer2024Courses() {
             .then((data) => {
                 console.log(data);
                 setContent(data);
+                setLoading(false);
             })
             .catch((error) => {
                 console.error("Error:", error);
+                setLoading(false);
             })
     }, [])
     console.log(content)
+
+    if (loading) {
+        return <div className="text-6xl font-bold text-center mt-8 mb-8">Loading...</div>;
+      }
+    
     
     return (
         <div>

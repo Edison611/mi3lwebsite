@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useUser } from './UserContext';
 
 const ProtectedRoute = ({ element: Component, ...rest }) => {
+  const [loading, setLoading] = useState(true);
   const [admin, setAdmin] = useState(false);
   const { user } = useUser();
-  const navigate = useNavigate(); 
 
   useEffect(() => {
     if (!user) {
@@ -21,20 +20,26 @@ const ProtectedRoute = ({ element: Component, ...rest }) => {
       .then((response) => response.json())
       .then((data) => {
         setAdmin(data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error('Error:', error);
+        setLoading(false);
       });
   }, []);
 
   if (user === null) {
     // User is not logged in, redirect to login
-    return navigate('/login');
+    return <div className="text-6xl font-bold text-center mt-8 mb-8">Please Login</div>;
+  }
+
+  if (loading) {
+    return <div className="text-6xl font-bold text-center mt-8 mb-8">Loading...</div>;
   }
 
   if (!admin) {
     // User is not an admin
-    return <div className="text-6xl font-bold text-center mb-8">You do not have permission to view this page</div>;
+    return <div className="text-6xl font-bold text-center mt-8 mb-8">You do not have permission to view this page</div>;
   }
 
   // User is an admin

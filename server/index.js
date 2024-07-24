@@ -5,6 +5,7 @@ require('dotenv').config(); // This loads environment variables from .env into p
 const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
+const authenticateToken = require('./authentication')
 
 const app = express();
 const port = 5000;
@@ -68,7 +69,6 @@ app.post('/add-course', async (req, res) => {
 
         // Insert preset items
         item = req.body
-        console.log(item)
         const insertItemQuery = `
         INSERT INTO courses (name, price, price_for_lesson, active)
         VALUES ($1, $2, $3, $4)
@@ -99,7 +99,6 @@ app.post('/add-lesson', async (req, res) => {
 
         // Insert preset items
         item = req.body
-        console.log(item)
         const insertItemQuery = `
         INSERT INTO lessons (course_id, date, description, teachers)
         VALUES ($1, $2, $3, $4)
@@ -179,6 +178,32 @@ app.post('/delete-lesson', async (req, res) => {
     }
 });
 
+app.patch('/set-user-role', authenticateToken, async (req, res) => {
+    const user = req.body
+    console.log(user)
+    const query1 = `
+        UPDATE users 
+        SET admin = $1, member = $2
+        WHERE id = $3
+    `
+    // const query2 = `
+    //     INSERT INTO auth
+    //     VALUES ($1, $2)
+    // `
+    // const query3 = `
+    //     DELETE FROM auth
+    //     WHERE page_id = $1 AND user_id = $2
+    // `
+    try {
+        await pool.query(query1, [user.admin, user.member, user.id]);
+
+        res.status(200).send("Updated user info successfully");
+    } catch (err) {
+        console.error('Error verifying admin:', err);
+        res.status(500).send('Error verifying admin');
+    }
+});
+
 app.post('/add-user', async (req, res) => {
     const user = req.body
     const createTableQuery = `
@@ -186,6 +211,7 @@ app.post('/add-user', async (req, res) => {
             id SERIAL PRIMARY KEY,
             name VARCHAR(255) NOT NULL,
             email VARCHAR(255) NOT NULL,
+            member BOOL DEFAULT FALSE,
             admin BOOL DEFAULT FALSE
         )
     `;
@@ -211,6 +237,21 @@ app.post('/add-user', async (req, res) => {
     }
 });
 
+app.get('/get-users', authenticateToken, async (req, res) => {
+    
+    const selectTableQuery = `
+    SELECT * FROM users
+    ORDER BY id
+`
+    try {
+        result = await pool.query(selectTableQuery);
+        res.status(200).send(result.rows);
+    } catch (err) {
+        console.error('Error getting items:', err);
+        res.status(500).send('Error getting item');
+    }
+})
+
 app.post('/verify-admin', async (req, res) => {
     const email = req.body.email;
 
@@ -225,6 +266,43 @@ app.post('/verify-admin', async (req, res) => {
             return;
         }
         res.status(200).send(result.rows[0].admin);
+    } catch (err) {
+        console.error('Error verifying admin:', err);
+        res.status(500).send('Error verifying admin');
+    }
+});
+
+app.post('/verify-access', async (req, res) => {
+    const email = req.body.email;
+    const page = req.body.page_id;
+
+    const query1= `
+        SELECT * FROM users WHERE email = $1
+    `;
+
+    const query2 = `
+        SELECT * FROM auth 
+        WHERE page_id = $1 AND user_id = $2
+    `
+
+    try {
+        let result = await pool.query(query1, [email]);
+        if (result.rows.length === 0) {
+            res.status(200).send(false);
+            return;
+        }
+        if (result.rows[0].member === true) {
+            res.status(200).send(true);
+            return;
+        }
+        else {
+            let result2 = await pool.query(query2, [page, result.rows[0].id]);
+            if (result2.rows.length === 0) {
+                res.status(200).send(false);
+                return;
+            }
+            res.status(200).send(true);
+        }
     } catch (err) {
         console.error('Error verifying admin:', err);
         res.status(500).send('Error verifying admin');

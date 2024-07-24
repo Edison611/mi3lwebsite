@@ -30,6 +30,8 @@ import Login from './pages/login/Login.js';
 import Profile from './pages/login/Profile.js';
 import { UserProvider } from './components/UserContext.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
+import ProtectedAccessRoute from './components/ProtectedAccessRoute.jsx';
+import Userroles from './pages/admin/UserRoles.js';
 
 function App() {
   return (
@@ -46,15 +48,15 @@ function App() {
           <Route path="/courses/online/full-vrc-guide" element={<Intro />} />
           <Route path='/courses/online/full-vrc-guide/1' element={<Fvg1 />} />
           <Route path='/courses/online/full-vrc-guide/2' element={<Fvg2 />} />
-          <Route path='/courses/online/full-vrc-guide/3' element={<Fvg3 />} />
-          <Route path='/courses/online/full-vrc-guide/4' element={<Fvg4 />} />
-          <Route path='/courses/online/full-vrc-guide/5' element={<Fvg5 />} />
-          <Route path='/courses/online/full-vrc-guide/6' element={<Fvg6 />} />
-          <Route path='/courses/online/full-vrc-guide/7' element={<Fvg7 />} />
-          <Route path='/courses/online/full-vrc-guide/8' element={<Fvg8 />} />
-          <Route path='/courses/online/full-vrc-guide/9' element={<Fvg9 />} />
-          <Route path='/courses/online/full-vrc-guide/10' element={<Fvg10 />} />
-          <Route path='/courses/online/full-vrc-guide/11' element={<Fvg11 />} />
+          <Route path='/courses/online/full-vrc-guide/3' element={<ProtectedAccessRoute element={<Fvg3 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/4' element={<ProtectedAccessRoute element={<Fvg4 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/5' element={<ProtectedAccessRoute element={<Fvg5 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/6' element={<ProtectedAccessRoute element={<Fvg6 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/7' element={<ProtectedAccessRoute element={<Fvg7 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/8' element={<ProtectedAccessRoute element={<Fvg8 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/9' element={<ProtectedAccessRoute element={<Fvg9 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/10' element={<ProtectedAccessRoute element={<Fvg10 />} page_id={1}/>} />
+          <Route path='/courses/online/full-vrc-guide/11' element={<ProtectedAccessRoute element={<Fvg11 />} page_id={1}/>} />
           <Route path='/login' element={<Login/> }/>
           <Route path='/profile' element={<Profile/> }/>
           <Route path="/teams" element={<Teams />} />
@@ -63,6 +65,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Shop />} />
           <Route path='/admin' element={<ProtectedRoute element={<Admin />}/>} />
+          <Route path='/admin/user-roles' element={<ProtectedRoute element={<Userroles />}/>} />
           <Route path='/admin/createcourse' element={<ProtectedRoute element={<Createcourses />}/>} />
         </Routes>
       </UserProvider>

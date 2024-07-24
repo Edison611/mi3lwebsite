@@ -21,7 +21,7 @@ const Fvg10 = () => {
             <ul className="text-lg leading-relaxed ml-10 list-disc">
                 <li className="text-lg leading-relaxed">Tank: Stores the compressed air.</li>
                 <li className="text-lg leading-relaxed">Solenoid Valve: Controls the flow of air to the actuators.</li>
-                <li className="text-lg leading-relaxed">Actuators (Cylinders): Convert compressed air into mechanical motion.</li>
+                <li className="text-lg leading-relaxed">Cylinder (Piston): Convert compressed air into mechanical motion.</li>
                 <li className="text-lg leading-relaxed">Air Tubing: Transports compressed air between components.</li>
             </ul>
             <img src="https://kb.vex.com/hc/article_attachments/17271878462868" alt="Pneumatic System Diagram" className="rounded-lg mx-auto mt-10 mb-8"/>
@@ -48,12 +48,12 @@ void lift() {
             <Mcq 
               question="Which component in a pneumatic system converts compressed air into mechanical motion?"
               options={[
-                "Compressor",
+                "Tank",
                 "Solenoid Valve",
-                "Actuator (Cylinder)",
+                "Cylinder (Piston)",
                 "Air Tubing"
               ]}
-              correctAnswer="Actuator (Cylinder)"
+              correctAnswer="Cylinder (Piston)"
             />
         </div>
         <hr className="text-center max-w-4xl border-t-4 border-gray-900 mx-auto mb-5"></hr>

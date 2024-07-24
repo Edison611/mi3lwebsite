@@ -15,7 +15,7 @@ export default function Home() {
         <div className="font-mono">
              <div className="hero" id='home'>
                 <div className="blurry-background">
-                    <img className="w-full" src={bg} alt=""></img>
+                    <img className="w-full blur-sm" src={bg} alt=""></img>
                     <div className="hero-content">
                         
                     <button className="button-learn-more text-4xl absolute top-10 md:relative md:bottom-70">

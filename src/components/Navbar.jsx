@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useUser } from "./UserContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+    const navigate = useNavigate();
     const { user } = useUser();
 
     const [isCoursesDropdownOpen, setCoursesDropdownOpen] = useState(false);
@@ -25,7 +27,7 @@ export default function Navbar() {
 
     return (
         <nav className="font-mono border-gray-200 bg-gray-900 sticky top-0 z-30">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
                 <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src={logo} alt="Mi3L Schools" className="w-20 h-13 flex p-0" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Mi3L School</span>
@@ -34,6 +36,9 @@ export default function Navbar() {
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-900 border-gray-900">
                         <li>
                             <Link to="/" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Home</Link>
+                        </li>
+                        <li>
+                            <a href="https://2055vrc.live/" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Blog</a>
                         </li>
                         <li 
                             onMouseEnter={() => handleMouseEnter(setCoursesDropdownOpen)} 
@@ -81,6 +86,7 @@ export default function Navbar() {
                                 </ul>
                             )}
                         </li>
+                        
                         <li>
                             <Link to="/contact" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Contact</Link>
                         </li>

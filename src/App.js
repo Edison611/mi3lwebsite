@@ -32,6 +32,7 @@ import { UserProvider } from './components/UserContext.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import ProtectedAccessRoute from './components/ProtectedAccessRoute.jsx';
 import Userroles from './pages/admin/UserRoles.js';
+import Donation from './pages/shop/donation.js';
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
           <Route path="/teams/achievements" element={<Achievements />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Shop />} />
+          <Route path="/donation" element={<Donation />} />
           <Route path='/admin' element={<ProtectedRoute element={<Admin />}/>} />
           <Route path='/admin/user-roles' element={<ProtectedRoute element={<Userroles />}/>} />
           <Route path='/admin/createcourse' element={<ProtectedRoute element={<Createcourses />}/>} />

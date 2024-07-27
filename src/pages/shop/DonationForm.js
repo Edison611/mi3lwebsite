@@ -1,14 +1,25 @@
 const DonationForm = () => {
     return (
-        <div className="w-100" style={{ position: 'relative', overflow: 'hidden', height: '500px', paddingTop: '500px' }}>
+      <div style={{ position: 'relative', overflow: 'hidden', height: '1200px', width: '100%' }}>
         <iframe
           title="Donation form powered by Zeffy"
-          style={{ position: 'absolute', border: '0', top: '0', left: '0', bottom: '0', right: '0', width: '100%', height: '100%' }}
-          src="https://www.zeffy.com/embed/ticketing/4b3f8412-96c3-401d-9571-49e885a17952"
-          allowpaymentrequest
+          style={{
+            position: 'absolute',
+            border: 0,
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            width: '100%',
+            height: '100%',
+          }}
+          src="https://www.zeffy.com/embed/donation-form/f2b29422-9f3a-4b3b-8b4f-91d98adb7d54"
+          allow="payment"
           allowTransparency="true"
         ></iframe>
-        </div>
+      </div>
     );
   };
+  
   export default DonationForm;
+  

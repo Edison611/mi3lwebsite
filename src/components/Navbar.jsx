@@ -93,6 +93,9 @@ export default function Navbar() {
                         <li>
                             <Link to="/store" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Store</Link>
                         </li>
+                        <li>
+                            <Link to="/donation" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Donate</Link>
+                        </li>
                        {user && <li>
                             <Link to="/profile" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Profile</Link>
                         </li>}

@@ -160,9 +160,9 @@ void kickerTask() { // int -> void
               answer={
 `void printEncoders() {
     while (true) {
-        pros::lcd::print(1, "Left Encoder: " + left_encoder.get_position());
-        pros::lcd::print(2, "Right Encoder: " + right_encoder.get_position());
-        pros::lcd::print(3, "Inertial Angle: " + inertial_sensor.get_heading());
+        pros::lcd::set_text(1, "Left Encoder: " + left_encoder.get_position());
+        pros::lcd::set_text(2, "Right Encoder: " + right_encoder.get_position());
+        pros::lcd::set_text(3, "Inertial Angle: " + inertial_sensor.get_heading());
         pros::delay(80);
     }
 }

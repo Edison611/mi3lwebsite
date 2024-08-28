@@ -33,6 +33,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx';
 import ProtectedAccessRoute from './components/ProtectedAccessRoute.jsx';
 import Userroles from './pages/admin/UserRoles.js';
 import Donation from './pages/shop/donation.js';
+import Test from './pages/teams/test.js';
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path='/admin' element={<ProtectedRoute element={<Admin />}/>} />
           <Route path='/admin/user-roles' element={<ProtectedRoute element={<Userroles />}/>} />
           <Route path='/admin/createcourse' element={<ProtectedRoute element={<Createcourses />}/>} />
+          <Route path='/test' element={<Test />}/>
         </Routes>
       </UserProvider>
       <Footer />

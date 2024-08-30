@@ -9,7 +9,7 @@ export default function Timeline() {
 
   return (
     <div>
-      <div className="text-3xl text-center font-bold mt-5">Timeline (Under Construction)</div>
+      <div className="text-3xl text-center font-bold mt-5">Award History</div>
       <VerticalTimeline lineColor='gray'>
         {items.map((item, index) => (
           <VerticalTimelineElement
@@ -20,8 +20,8 @@ export default function Timeline() {
             date={item.date}
             iconStyle={{ background: 'rgb(33, 150, 243)' }}
           > 
-            <h3 className="vertical-timeline-element-title text-[#000080] font-bold">{item.title}</h3>
-            <h4 className="vertical-timeline-element-subtitle">{item.location}</h4>
+            <h3 className="vertical-timeline-element-title text-[#000080] font-bold mb-6">{item.title}</h3>
+            <h4 className="vtext-2xl font-bold mb-4">{item.location}</h4> 
             <h1 className="vertical-timeline-element-title">{item.description}</h1>
             <h5 className="vertical-timeline-element-title">{item.description2}</h5>
             

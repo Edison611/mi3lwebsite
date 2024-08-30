@@ -16,7 +16,7 @@ const imageMap = {
 const items = [
   {
     title: "VEX AI World Skills Champions",
-    location: "Award",
+    location: "",
     date: "Houston, TX June 5th, 2024",
     imgKey: 'home1',
     description: "Robot Skills Champion (VRC/VEXU/VAIRC)",

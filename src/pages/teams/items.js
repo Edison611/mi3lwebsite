@@ -1,6 +1,6 @@
 // Import images
 import home1 from '../../images/home1.png';
-import home2 from '../../images/home2.jpg';
+import home2 from '../../images/award2.webp';
 import home3 from '../../images/home3.png';
 import home4 from '../../images/home4.png';
 

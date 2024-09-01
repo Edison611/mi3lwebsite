@@ -122,6 +122,7 @@ export default function Navbar() {
                                 >
                                     <li><Link to="/courses/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
                                     <li><Link to="/courses/summer-2024" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Summer 2024</Link></li>
+                                    <li><Link to="/courses/AerialDroneCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Aerial Drone Course</Link></li>
                                 </ul>
                             )}
                         </li>

@@ -27,6 +27,7 @@ export default function Navbar() {
     const coursesLinks = [
         { path: "/courses/online", name: "Online Courses" },
         { path: "/courses/summer-2024", name: "Summer 2024" },
+        { path: "/courses/AerialDroneCouse", name: "Aerial Drone Course" },
     ];
     
     const achievementsLinks = [

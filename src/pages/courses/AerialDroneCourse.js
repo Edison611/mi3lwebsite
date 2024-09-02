@@ -26,9 +26,15 @@ export default function AerialDroneCourses() {
                     https://youtu.be/nitDt76IX3k
                 </a>
                 <p className='inline'>
-                    &nbsp;Programming in Python, 7 sensors, AI and fly tricks, you will learn all these in our 4 levels of courses in 4 months, beginner, intermediate, advanced and expert. Taught by aerospace engineer with 20 years experience. Small class, every 2-4 students share one drone. Click on the image below to reserve a spot
+                    &nbsp;Programming in Python, 7 sensors, AI and fly tricks, you will learn all these in our 4 levels of courses in 4 months, beginner, intermediate, advanced and expert. Taught by aerospace engineer with 20 years experience. Small class, every 2-4 students share one drone. 
                 </p>
             </div>
+            <button 
+        className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
+        onClick={handleImgClick} // Add your onClick handler
+    >
+        Reserve a Spot
+    </button>
             <img className='cursor-pointer' src={DroneCourseImg} onClick={handleImgClick} />
         </div>
     )

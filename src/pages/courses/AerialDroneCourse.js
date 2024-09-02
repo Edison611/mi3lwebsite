@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
 import CourseTemplate from "./CourseTemplate";
+import DroneCourseImg from '../../images/DroneCourseImg.jpg'
 
-export default function Summer2024Courses() {
+const handleYTClick = () => {
+    window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');
+  };
+
+const handleImgClick = () => {
+    window.open('https://forms.gle/EbAEvuaYvkpckJJM6', '_blank', 'noopener,noreferrer');
+}
+
+export default function AerialDroneCourses() {
     const [loading, setLoading] = useState(true);
     const [content, setContent] = useState([]);
-    const description = "This is a course for students who want to learn about robotics and programming. Students will learn how to build and program robots using VEX Robotics kits. The course will cover topics such as mechanical design, programming, and problem-solving where students will work in teams to design, build, and program robots to complete various challenges to help students develop their skills and most importantly have fun! Classes are from 1PM - 4PM at 130 Aintree Terrace, Oakville, ON. "
     useEffect (() => {
         fetch("https://mi3lwebsite-api.vercel.app/course-info", {
             method: "POST",
@@ -32,8 +40,23 @@ export default function Summer2024Courses() {
     
     
     return (
-        <div>
-            {content.length>0&& <CourseTemplate title="2055A Capybaras V5 Robotics Summer Course" description={description} content={content} link={"https://docs.google.com/forms/d/e/1FAIpQLScmH8xrI2KK1v63tkxyUTEIAAo_vJDiE67sYw_ijRq2J8WLew/viewform"}/>}
+        <div className='flex flex-col items-center space-y-6'>
+            <h1 className='text-center font-bold text-5xl'>Arial Drone Course</h1>
+            <div className='text-center px-6'>
+                <p className='inline'>
+                    See your code come to life and take flight with our curriculum! Mi3L School offering community great STEM learning opportunity: first Aerial drone course in for Grd 6-12!
+                </p>
+                <a 
+                    onClick={handleYTClick}
+                    className='inline text-blue-500 underline cursor-pointer'
+                >
+                    https://youtu.be/nitDt76IX3k
+                </a>
+                <p className='inline'>
+                    &nbsp;Programming in Python, 7 sensors, AI and fly tricks, you will learn all these in our 4 levels of courses in 4 months, beginner, intermediate, advanced and expert. Taught by aerospace engineer with 20 years experience. Small class, every 2-4 students share one drone. Click on the image below to reserve a spot
+                </p>
+            </div>
+            <img className='cursor-pointer' src={DroneCourseImg} onClick={handleImgClick} />
         </div>
     )
 }

@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import CourseTemplate from "./CourseTemplate";
+import { useState} from "react";
 import DroneCourseImg from '../../images/DroneCourseImg.jpg'
 
 const handleYTClick = () => {
@@ -11,32 +10,6 @@ const handleImgClick = () => {
 }
 
 export default function AerialDroneCourses() {
-    const [loading, setLoading] = useState(true);
-    const [content, setContent] = useState([]);
-    useEffect (() => {
-        fetch("https://mi3lwebsite-api.vercel.app/course-info", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({course_id: 1}),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setContent(data);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                setLoading(false);
-            })
-    }, [])
-    console.log(content)
-
-    if (loading) {
-        return <div className="text-6xl font-bold text-center mt-8 mb-8">Loading...</div>;
-      }
     
     
     return (
@@ -44,7 +17,7 @@ export default function AerialDroneCourses() {
             <h1 className='text-center font-bold text-5xl'>Arial Drone Course</h1>
             <div className='text-center px-6'>
                 <p className='inline'>
-                    See your code come to life and take flight with our curriculum! Mi3L School offering community great STEM learning opportunity: first Aerial drone course in for Grd 6-12!
+                    See your code come to life and take flight with our curriculum! Mi3L School offering community great STEM learning opportunity: first Aerial drone course in for Grd 6-12!&nbsp;
                 </p>
                 <a 
                     onClick={handleYTClick}

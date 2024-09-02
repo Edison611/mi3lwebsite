@@ -24,6 +24,7 @@
     "react-scripts": "5.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "react-vertical-timeline-component": "^3.6.0",
+    "vercel": "^37.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

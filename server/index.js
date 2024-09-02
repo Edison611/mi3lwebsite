@@ -16,7 +16,9 @@ const pool = new Pool({
 });
 
 // Middleware to parse JSON requests
-app.use(cors());
+app.use(cors({
+    origin: 'https://mi3lschool.org'
+}));
 app.use(express.json());
 
 app.get('/', async (req, res) => {

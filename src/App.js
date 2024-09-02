@@ -61,7 +61,7 @@ function App() {
           <Route path='/login' element={<Login/> }/>
           <Route path='/profile' element={<Profile/> }/>
           <Route path="/teams" element={<Teams />} />
-          <Route path="/teams/timeline" element={<Timeline />} />
+          <Route path="/teams/awards" element={<Timeline />} />
           <Route path="/teams/achievements" element={<Achievements />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Shop />} />

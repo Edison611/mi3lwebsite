@@ -39,11 +39,11 @@ const Teams = () => {
           </button>
         </div>
         <div className="team-section">
-          <h2 className="text-2xl font-semibold mb-2">Timeline</h2>
-          <p className="mb-4">View a timeline of all that has happened</p>
+          <h2 className="text-2xl font-semibold mb-2">Award History</h2>
+          <p className="mb-4">View all of our VRC Teams' awards!</p>
           <button 
             className="bg-blue-500 text-white py-2 px-4 rounded"
-            onClick={() => navigate('/teams/timeline')}
+            onClick={() => navigate('/teams/awards')}
           >
             Learn More
           </button>

@@ -13,30 +13,7 @@ const handleImgClick = () => {
 export default function AerialDroneCourses() {
     const [loading, setLoading] = useState(true);
     const [content, setContent] = useState([]);
-    useEffect (() => {
-        fetch("https://mi3lwebsite-api.vercel.app/course-info", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({course_id: 1}),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setContent(data);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                setLoading(false);
-            })
-    }, [])
-    console.log(content)
-
-    if (loading) {
-        return <div className="text-6xl font-bold text-center mt-8 mb-8">Loading...</div>;
-      }
+    
     
     
     return (

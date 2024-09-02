@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import CourseTemplate from "./CourseTemplate";
+import { useState } from "react";
 import DroneCourseImg from '../../images/DroneCourseImg.jpg'
 
 const handleYTClick = () => {
@@ -11,14 +10,11 @@ const handleImgClick = () => {
 }
 
 export default function AerialDroneCourses() {
-    const [loading, setLoading] = useState(true);
-    const [content, setContent] = useState([]);
-    
-    
+
     
     return (
         <div className='flex flex-col items-center space-y-6'>
-            <h1 className='text-center font-bold text-5xl'>Arial Drone Course</h1>
+            <h1 className='text-center font-bold text-5xl'>Aerial Drone Course</h1>
             <div className='text-center px-6'>
                 <p className='inline'>
                     See your code come to life and take flight with our curriculum! Mi3L School offering community great STEM learning opportunity: first Aerial drone course in for Grd 6-12!

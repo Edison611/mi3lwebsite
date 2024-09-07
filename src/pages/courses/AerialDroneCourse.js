@@ -7,6 +7,10 @@ const handleYTClick = () => {
 
 const handleImgClick = () => {
     window.open('https://forms.gle/EbAEvuaYvkpckJJM6', '_blank', 'noopener,noreferrer');
+};
+
+const paymentClick = () => {
+    window.open('https://www.zeffy.com/en-CA/ticketing/4e0adc5f-b2d0-4ced-be41-68f03d5a3f45', '_blank', 'noopener,noreferrer');
 }
 
 export default function AerialDroneCourses() {
@@ -36,6 +40,16 @@ export default function AerialDroneCourses() {
         Reserve a Spot
     </button>
             <img className='cursor-pointer' src={DroneCourseImg} onClick={handleImgClick} />
+
+        <footer>
+        <button 
+        className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
+        onClick={paymentClick}
+        
+    >
+        Make a payment
+    </button>
+        </footer>
         </div>
     )
 }

@@ -13,7 +13,7 @@ export default function Home() {
     const navigate = useNavigate();
     return (
         <div className="font-mono">
-            <div className="hero" id='home'>
+            <div className="Noto+Sans" id='home'>
                 <div className="blurry-background relative">
                     <img className="w-full h-64 md:h-96 object-cover blur-sm" src={bg} alt="" />
                     <div className="hero-content absolute inset-0 flex items-center justify-center">

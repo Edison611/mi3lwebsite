@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DroneCourseImg from '../../images/DroneCourseImg.jpg'
 
 const handleYTClick = () => {
@@ -12,9 +12,23 @@ const handleImgClick = () => {
 const paymentClick = () => {
     window.open('https://www.zeffy.com/en-CA/ticketing/4e0adc5f-b2d0-4ced-be41-68f03d5a3f45', '_blank', 'noopener,noreferrer');
 }
-
+const slideImages = [
+    '../../images/aerial/1.jpg',
+    '../../images/aerial/2.jpg',
+    '../../images/aerial/3.jpg',
+    '../../images/aerial/4.jpg',
+    // Add more image paths as needed
+];
 export default function AerialDroneCourses() {
+    const [currentSlide, setCurrentSlide] = useState(0);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide(prevSlide => (prevSlide + 1) % slideImages.length);
+        }, 3000); // Change slide every 3 seconds
+
+        return () => clearInterval(interval);
+    }, []);
     
     return (
         <div className='flex flex-col items-center space-y-6'>
@@ -40,7 +54,14 @@ export default function AerialDroneCourses() {
         Reserve a Spot
     </button>
             <img className='cursor-pointer' src={DroneCourseImg} onClick={handleImgClick} />
-
+        {/* Slideshow Section */}
+        <div className='relative w-full max-w-lg'>
+                <img 
+                    src={slideImages[currentSlide]} 
+                    alt={`Slide ${currentSlide + 1}`} 
+                    className='w-full h-auto'
+                />
+        </div>
         <footer>
         <button 
         className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'

@@ -8,7 +8,7 @@ const OnlineCourses = () => {
   const [brand, setBrand] = useState('');
 
   const petTypes = ['Cat', 'Dog'];
-  const brands = ['Royal Canin', 'Brand B', 'Brand C'];
+  const brands = ['Royal Canin'];
 
   const renderIframe = () => {
     if (petType === 'dog' && brand === 'royal canin') {

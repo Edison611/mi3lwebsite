@@ -29,15 +29,18 @@ const Fvg8 = () => {
                 <li className="text-lg leading-relaxed">Update Position: Use the distance and angle to update the robot's position on the field.</li>
             </ol>
             <CodeBlock language="cpp" codeString={
-`void update_odometry() {
-    double x = 0.0;
-    double y = 0.0;
+`double x = 0.0;
+double y = 0.0;
+void update_odometry() {
     double theta = inertial_sensor.get_heading();
 
     double distance = (left_distance + right_distance) / 2.0; // You will need to convert encoder values to distance
-
-    x += distance * cos(theta);
-    y += distance * sin(theta);
+    
+    // Make sure sensor values don't read NaN
+    if (!isnan(distance) && !isnan(theta)) {
+        x += distance * cos(theta);
+        y += distance * sin(theta);
+    }
 
     // Print position for verification
     std::cout << "X: " << x << " Y: " << y << " Theta: " << theta << std::endl; // To print to the brain you will need to use pros::lcd

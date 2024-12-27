@@ -27,12 +27,11 @@ export default function Navbar() {
     const coursesLinks = [
         { path: "/courses/online", name: "Online Courses" },
         { path: "/courses/summer-2024", name: "Summer 2024" },
+        { path: "/courses/AerialDroneCourse", name: "Aerial Drone Course" },
     ];
     
     const achievementsLinks = [
         { path: "/teams/timeline", name: "Timeline" },
-        { path: "/teams/2055A", name: "2055A" },
-        { path: "/teams/2055X", name: "2055X" },
         { path: "/teams/achievements", name: "Achievements" },
     ];
     const menuLinks = [
@@ -40,7 +39,6 @@ export default function Navbar() {
         { path: "https://2055vrc.live/", name: "Blog" },
         ...coursesLinks,
         ...achievementsLinks,
-        { path: "/contact", name: "Contact" },
         { path: "/store", name: "Store" },
         { path: "/donation", name: "Donate" },
         user ? { path: "/profile", name: "Profile" } : { path: "/login", name: "Login" },
@@ -122,6 +120,7 @@ export default function Navbar() {
                                 >
                                     <li><Link to="/courses/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
                                     <li><Link to="/courses/summer-2024" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Summer 2024</Link></li>
+                                    <li><Link to="/courses/AerialDroneCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Aerial Drone Course</Link></li>
                                 </ul>
                             )}
                         </li>
@@ -130,8 +129,8 @@ export default function Navbar() {
                             onMouseLeave={() => handleMouseLeave(setAchievementsDropdownOpen)} 
                             className="relative"
                         >
-                            <Link to="/teams" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
-                            Teams
+                            <Link to="/about" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
+                            About
                             <svg className="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -142,17 +141,13 @@ export default function Navbar() {
                                     onMouseEnter={() => handleMouseEnter(setAchievementsDropdownOpen)}
                                     onMouseLeave={() => handleMouseLeave(setAchievementsDropdownOpen)}
                                 >
-                                    <li><Link to="/teams/timeline" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Timeline</Link></li>
-                                    <li><Link to="/teams/2055A" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2055A</Link></li>
-                                    <li><Link to="/teams/2055X" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2055X</Link></li>
+                                    <li><Link to="/contact" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Contact Us</Link></li>
+                                    <li><Link to="/teams/timeline" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">History</Link></li>
                                     <li><Link to="/teams/achievements" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Achievements</Link></li>
                                 </ul>
                             )}
                         </li>
-                        
-                        <li>
-                            <Link to="/contact" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Contact</Link>
-                        </li>
+                    
                         <li>
                             <Link to="/store" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Store</Link>
                         </li>

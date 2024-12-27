@@ -3,7 +3,9 @@ import Navbar from './components/Navbar';
 import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home';
 import Courses from './pages/Courses';
+import About from './pages/About';
 import Summer2024Courses from './pages/courses/Summer2024';
+import AerialDroneCourse from './pages/courses/AerialDroneCourse';
 import Timeline from './pages/teams/Timeline';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
@@ -45,6 +47,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/summer-2024" element={<Summer2024Courses />} />
+          <Route path="/courses/AerialDroneCourse" element={<AerialDroneCourse />} />
           <Route path="/courses/online" element={<OnlineCourses />} />
           <Route path="/courses/online/full-vrc-guide" element={<Intro />} />
           <Route path='/courses/online/full-vrc-guide/1' element={<Fvg1 />} />
@@ -60,9 +63,13 @@ function App() {
           <Route path='/courses/online/full-vrc-guide/11' element={<ProtectedAccessRoute element={<Fvg11 />} page_id={1}/>} />
           <Route path='/login' element={<Login/> }/>
           <Route path='/profile' element={<Profile/> }/>
+          <Route path='/about' element={<About/> }/>
           <Route path="/teams" element={<Teams />} />
           <Route path="/teams/timeline" element={<Timeline />} />
           <Route path="/teams/achievements" element={<Achievements />} />
+          <Route path="/teams/2055A" element={<teamA />} />
+          <Route path="/teams/2055B" element={<teamB />} />
+          <Route path="/teams/2055X" element={<teamX />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Shop />} />
           <Route path="/donation" element={<Donation />} />

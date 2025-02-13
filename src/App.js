@@ -38,11 +38,12 @@ import Donation from './pages/shop/donation.js';
 
 function App() {
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen">
       
       <ScrollToTop />
       <UserProvider>
       <Navbar />
+      <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
@@ -77,6 +78,7 @@ function App() {
           <Route path='/admin/user-roles' element={<ProtectedRoute element={<Userroles />}/>} />
           <Route path='/admin/createcourse' element={<ProtectedRoute element={<Createcourses />}/>} />
         </Routes>
+      </div>
       </UserProvider>
       <Footer />
     </div>

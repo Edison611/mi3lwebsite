@@ -108,7 +108,7 @@ int kickerTask() {
               answer={
 `#include "main.h" // added quotations
 pros::Motor catapult(1);
-pros::Rotation kicker_rot(13, false);
+pros::Rotation kicker_rot(13); // In PROS 4, the second parameter is not needed and will cause an error. Use negative values for reversed motors.
 bool cata_shoot = false;
 
 void kickerTask() { // int -> void

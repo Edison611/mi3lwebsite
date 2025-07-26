@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Home() {
     const navigate = useNavigate();
     return (
-        <div className="font-mono">
+        <div className="font-mono ">
             <div className="Noto+Sans" id='home'>
                 <div className="blurry-background relative">
                     <img className="w-full h-64 md:h-96 object-cover blur-sm" src={bg} alt="" />
@@ -26,17 +26,17 @@ export default function Home() {
             <div id='mi3l' className='text-center mt-6 md:mt-10 text-2xl md:text-4xl font-bold'>My Life Long Learning</div>
             <div className='text-center mt-3 text-lg md:text-xl'>Join our World Class VEX Robotics Team Today!</div>
             <div className='body1 flex flex-col md:flex-row mt-6 md:mt-10'>
-                <div className="md:w-1/2 px-4">
+                <div className="md:w-1/2 px-4 ml-5">
                     <div className='mt-3 font-bold text-2xl md:text-3xl'>Our Mission</div>
                     <div className='mt-3 text-base md:text-lg'>
                         Our mission is to provide a world-class robotics education to students of all ages. We strive to provide a safe, inclusive, and fun environment for students to learn and grow. Our goal is to inspire curiosity, creativity, and a lifelong passion for technology and innovation. Through hands-on learning and collaborative projects, we aim to equip students with the critical thinking, problem-solving, and teamwork skills necessary for success.
                     </div>
                 </div>
-                <img src={bg2} className='w-full md:w-1/2 mt-4 md:mt-0 rounded-lg' alt='' />
+                <img src={bg2} className='mx-2 w-full md:w-1/2 mt-4 md:mt-0 rounded-lg' alt='' />
             </div>
             <div className='body2 flex flex-col md:flex-row mt-6 md:mt-10'>
-                <img src={bg3} className='w-full md:w-1/3 mt-4 md:mt-0 rounded-lg' alt='' />
-                <div className='md:w-2/3 px-4'>
+                <img src={bg3} className='mx-2 w-full md:w-1/3 mt-4 md:mt-0 rounded-lg' alt='' />
+                <div className='md:w-2/3 px-4 mx-5'>
                     <div className='mt-3 font-bold text-2xl md:text-3xl'>Our Values</div>
                     <div className='mt-3 text-base md:text-lg'>
                         Our values embrace inclusivity and diversity, ensuring our programs are accessible and welcoming to all students, regardless of background or ability. Collaboration and teamwork are paramount, fostering mutual respect and the value of working together towards common goals. Upholding the highest standards of integrity and respect, we ensure all community interactions are conducted with honesty and kindness. Finally, we strive to empower our students, building their confidence and equipping them with the skills necessary for success.

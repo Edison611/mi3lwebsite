@@ -7,7 +7,7 @@ const UserItem = ({ user }) => {
     const [isMember, setIsMember] = useState(user.member);
 
     const updateTable = (m, a) => {
-        fetch("https://mi3lwebsite-api.vercel.app/set-user-role", {
+        fetch("https://mi3lwebsite-api-three.vercel.app/set-user-role", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const Userroles = () => {
     const [users, setUsers] = useState([]);
 
     useEffect (() => {
-        fetch("https://mi3lwebsite-api.vercel.app/get-users", {
+        fetch("https://mi3lwebsite-api-three.vercel.app/get-users", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

@@ -10,7 +10,7 @@ const ProtectedAccessRoute = ({ element: Component, page_id, ...rest }) => {
     if (!user) {
       return;
     }
-    fetch("https://mi3lwebsite-api.vercel.app/verify-access", {
+    fetch("https://mi3lwebsite-api-three.vercel.app/verify-access", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

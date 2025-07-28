@@ -10,7 +10,7 @@ function Login() {
   const { user, setUser } = useUser();
 
   function addUser(u) {
-    fetch('https://mi3lwebsite-api.vercel.app/add-user', {
+    fetch('https://mi3lwebsite-api-three.vercel.app/add-user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

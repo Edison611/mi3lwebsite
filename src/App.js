@@ -6,6 +6,7 @@ import Courses from './pages/Courses';
 import About from './pages/About';
 import Summer2024Courses from './pages/courses/Summer2024';
 import AerialDroneCourse from './pages/courses/AerialDroneCourse';
+import SummerCourse from './pages/courses/SummerCourse';
 import Timeline from './pages/teams/Timeline';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
@@ -49,6 +50,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/summer-2024" element={<Summer2024Courses />} />
+          <Route path="/courses/SummerCourse" element={<SummerCourse />} />
           <Route path="/courses/AerialDroneCourse" element={<AerialDroneCourse />} />
           <Route path="/courses/online" element={<OnlineCourses />} />
           <Route path="/courses/online/full-vrc-guide" element={<Intro />} />

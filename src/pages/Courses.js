@@ -11,6 +11,8 @@ const Courses = () => {
             <button className="button-2" onClick={() => navigate("/courses/online")}>Online Courses</button>
             <button className="button-2" onClick={() => navigate("/courses/summer-2024")}>Summer 2024 Courses</button>
             <button className="button-2" onClick={() => navigate("/courses/AerialDroneCourse")}>Aerial Drone Course</button>
+            <button className="button-2" onClick={() => navigate("/courses/SummerCourse")}>2025 Summer Course</button>
+
         </div>
       </div>
     );

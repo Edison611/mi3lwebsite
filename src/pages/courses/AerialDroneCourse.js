@@ -32,7 +32,7 @@ export default function AerialDroneCourses() {
     
     return (
         <div className='flex flex-col items-center space-y-6'>
-            <h1 className='text-center font-bold text-5xl'>Aerial Drone Course</h1>
+            <h1 className='text-center font-bold text-5xl mt-8'>Aerial Drone Course</h1>
             <div className='text-center px-6'>
                 <p className='inline'>
                 See your code come to life and take flight with our curriculum! 
@@ -44,11 +44,11 @@ export default function AerialDroneCourses() {
                 >
                     https://youtu.be/nitDt76IX3k
                 </a>
-                <p className='inline'>
+                <p>
                     &nbsp; Opportunity to join team after class to compete in US MI! Programming in Python, 7 sensors, AI and fly tricks, you will learn all these in our 4 levels of 15 courses in 4 months, beginner, intermediate, advanced and expert. Taught by aerospace engineer with 20 years experience. Small class, every 2-4 students share one drone. Please register below to reserve spot. 
                 </p>
 
-                <p className='inline'>
+                <p>
                     Location: 2A-1453 Cornwall Rd Oakville 
                 </p>
 

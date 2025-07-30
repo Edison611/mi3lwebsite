@@ -69,7 +69,7 @@ const Createcourses = () => {
         if (!selectedCourse) {
             return;
         }
-        fetch("https://mi3lwebsite-api.vercel.app/course-info", {
+        fetch("https://mi3lwebsite-api-three.vercel.app/course-info", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -97,7 +97,7 @@ const Createcourses = () => {
             description: description,
             teachers: teachers,
         };
-        fetch("https://mi3lwebsite-api.vercel.app/add-lesson", {
+        fetch("https://mi3lwebsite-api-three.vercel.app/add-lesson", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const Createcourses = () => {
             price_for_lesson: price_for_lesson,
             ongoing: ongoing
         };
-        fetch("https://mi3lwebsite-api.vercel.app/add-course", {
+        fetch("https://mi3lwebsite-api-three.vercel.app/add-course", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -138,7 +138,7 @@ const Createcourses = () => {
     }   
 
     useEffect(() => {
-        fetch("https://mi3lwebsite-api.vercel.app/courses")
+        fetch("https://mi3lwebsite-api-three.vercel.app/courses")
             .then((response) => response.json())
             .then((data) => {
                 setCourses(data);

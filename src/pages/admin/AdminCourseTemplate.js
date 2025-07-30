@@ -6,7 +6,7 @@ const AdminCourseTemplate = ({ title, description, content, link }) => {
         }
     }
     function deleteLesson(id) {
-        fetch("https://mi3lwebsite-api.vercel.app/delete-lesson", {
+        fetch("https://mi3lwebsite-api-three.vercel.app/delete-lesson", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

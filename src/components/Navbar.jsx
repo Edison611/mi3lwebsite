@@ -96,36 +96,9 @@ export default function Navbar() {
             </div>)}
                 <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-900 border-gray-900">
-                        <li>
-                            <Link to="/" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Home</Link>
-                        </li>
                         {/* <li>
                             <a href="https://2055vrc.live/" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Blog</a>
                         </li> */}
-                        <li 
-                            onMouseEnter={() => handleMouseEnter(setCoursesDropdownOpen)} 
-                            onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)} 
-                            className="relative"
-                        >
-                            <Link to="/courses" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
-                            Courses
-                            <svg className="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                            </Link>
-                            {isCoursesDropdownOpen && (
-                                <ul 
-                                    className="absolute top-full left-0 mt-0 w-48 border border-gray-200 rounded-md shadow-lg bg-gray-800 border-gray-700 z-50"
-                                    onMouseEnter={() => handleMouseEnter(setCoursesDropdownOpen)}
-                                    onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)}
-                                >
-                                    <li><Link to="/courses/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
-                                    <li><Link to="/courses/AerialDroneCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Aerial Drone Course</Link></li>
-                                    <li><Link to="/courses/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
-                                
-                                </ul>
-                            )}
-                        </li>
                         <li 
                             onMouseEnter={() => handleMouseEnter(setAchievementsDropdownOpen)} 
                             onMouseLeave={() => handleMouseLeave(setAchievementsDropdownOpen)} 
@@ -149,6 +122,31 @@ export default function Navbar() {
                                 </ul>
                             )}
                         </li>
+                        <li 
+                            onMouseEnter={() => handleMouseEnter(setCoursesDropdownOpen)} 
+                            onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)} 
+                            className="relative"
+                        >
+                            <Link to="/courses" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
+                            Courses
+                            <svg className="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                            </Link>
+                            {isCoursesDropdownOpen && (
+                                <ul 
+                                    className="absolute top-full left-0 mt-0 w-48 border border-gray-200 rounded-md shadow-lg bg-gray-800 border-gray-700 z-50"
+                                    onMouseEnter={() => handleMouseEnter(setCoursesDropdownOpen)}
+                                    onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)}
+                                >
+                                    <li><Link to="/courses/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
+                                    <li><Link to="/courses/AerialDroneCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
+                                    <li><Link to="/courses/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
+                                
+                                </ul>
+                            )}
+                        </li>
+                        
                     
                         <li>
                             <Link to="/store" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Store</Link>

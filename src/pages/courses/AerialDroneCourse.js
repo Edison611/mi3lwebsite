@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import DroneCourseImg from '../../images/FLLSummerCamp.png'
+import DroneCourseImg from '../../images/FLLSummerCamp.jpeg'
 
 const handleYTClick = () => {
     window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');

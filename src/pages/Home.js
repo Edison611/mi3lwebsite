@@ -44,7 +44,7 @@ export default function Home() {
                 </div>
             </div>
             <div className='body3 flex flex-wrap justify-center mt-6 md:mt-10'>
-                <div onClick={() => navigate('/courses')} className='relative w-full md:w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75 mt-4'>
+                <div onClick={() => navigate('/programs')} className='relative w-full md:w-1/3 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-75 mt-4'>
                     <img src={im2} className='w-full rounded-lg blur-sm object-cover h-48 md:h-96' alt='' />
                     <div className='font-bold absolute inset-0 flex items-center justify-center z-40 text-white text-2xl md:text-4xl'>
                         Our Programs

@@ -27,7 +27,7 @@ export default function Navbar() {
     const coursesLinks = [
         { path: "/programs/online", name: "Online Courses" },
         // { path: "/courses/summer-2024", name: "Summer 2024" },
-        { path: "/programs/fll-summer-camp", name: "Aerial Drone Course" },
+        { path: "/programs/fllSummerCamp", name: "Aerial Drone Course" },
         { path: "/programs/SummerCourse", name: "2025 Summer Course" },
     ];
     
@@ -140,7 +140,7 @@ export default function Navbar() {
                                     onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)}
                                 >
                                     <li><Link to="/programs/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
-                                    <li><Link to="/programs/" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
+                                    <li><Link to="/programs/fllSummerCamp" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
                                     <li><Link to="/programs/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
                                 
                                 </ul>

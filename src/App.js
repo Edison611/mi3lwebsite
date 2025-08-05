@@ -51,7 +51,7 @@ function App() {
           <Route path="/programs" element={<Courses />} />
           <Route path="/programs/summer-2024" element={<Summer2024Courses />} />
           <Route path="/programs/SummerCourse" element={<SummerCourse />} />
-          <Route path="/programs/fll-summer-camp" element={<AerialDroneCourse />} />
+          <Route path="/programs/fllSummerCamp" element={<AerialDroneCourse />} />
           <Route path="/programs/online" element={<OnlineCourses />} />
           <Route path="/programs/online/full-vrc-guide" element={<Intro />} />
           <Route path='/programs/online/full-vrc-guide/1' element={<Fvg1 />} />

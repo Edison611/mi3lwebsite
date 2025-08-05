@@ -15,7 +15,7 @@ const Sidebar = ({ courseName, chapters, isOpen, onClose }) => {
       <h2 className="text-2xl font-bold mt-5 mb-4">Table of Contents</h2>
       <ul>
         {chapters.map((chapter, index) => (
-          <li key={index} onClick={() => navigate(`/courses/online/${courseName}/${index+1}`)} className="mb-2 hover:bg-gray-600 text-md text-gray-200">
+          <li key={index} onClick={() => navigate(`/programs/online/${courseName}/${index+1}`)} className="mb-2 hover:bg-gray-600 text-md text-gray-200">
             {index+1}: {chapter}
           </li>
         ))}

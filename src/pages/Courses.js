@@ -4,13 +4,13 @@ const Courses = () => {
     const navigate = useNavigate();
     return (
       <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
-        <h1 className="text-6xl font-bold text-center mb-8">Courses</h1>
+        <h1 className="text-6xl font-bold text-center mb-8">Programs</h1>
         {/* <img src={image} alt="Example" className="w-full h-auto mb-8 rounded-lg" /> */}
-        <p className="text-lg leading-relaxed">We offer a range of courses for all grade levels. Please refer to the list below to view the current courses that we offer.</p>
+        <p className="text-lg leading-relaxed">We offer a range of programs and courses for all grade levels. Please refer to the list below to view the current programs that we offer.</p>
         <div className="max-w-2xl mx-auto p-6 bg-white flex justify-between space-x-4">
-            <button className="button-2" onClick={() => navigate("/courses/online")}>Online Courses</button>
-            <button className="button-2" onClick={() => navigate("/courses/AerialDroneCourse")}>FLL Robotics Summer Camp</button>
-            <button className="button-2" onClick={() => navigate("/courses/SummerCourse")}>2025 Summer Course</button>
+            <button className="button-2" onClick={() => navigate("/programs/online")}>Online Courses</button>
+            <button className="button-2" onClick={() => navigate("/programs/fll-summer-camp")}>FLL Robotics Summer Camp</button>
+            <button className="button-2" onClick={() => navigate("/programs/SummerCourse")}>2025 Summer Course</button>
 
         </div>
       </div>

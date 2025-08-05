@@ -123,10 +123,10 @@ export default function Footer() {
               Useful links
             </h6>
             <p className="mb-4">
-              <a href={'/courses'} className="text-neutral-600 dark:text-neutral-200"
+              <a href={'/programs'} className="text-neutral-600 dark:text-neutral-200"
               >Courses</a>
             </p>
-            <p className="mb-4">
+            <p className="mb-4">ß
               <a href={'/teams'} className="text-neutral-600 dark:text-neutral-200"
               >Teams</a>
             </p>

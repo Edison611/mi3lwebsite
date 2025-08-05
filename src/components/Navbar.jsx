@@ -25,10 +25,10 @@ export default function Navbar() {
     };
 
     const coursesLinks = [
-        { path: "/courses/online", name: "Online Courses" },
+        { path: "/programs/online", name: "Online Courses" },
         // { path: "/courses/summer-2024", name: "Summer 2024" },
-        { path: "/courses/AerialDroneCourse", name: "Aerial Drone Course" },
-        { path: "/courses/SummerCourse", name: "2025 Summer Course" },
+        { path: "/programs/fll-summer-camp", name: "Aerial Drone Course" },
+        { path: "/programs/SummerCourse", name: "2025 Summer Course" },
     ];
     
     const achievementsLinks = [
@@ -127,8 +127,8 @@ export default function Navbar() {
                             onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)} 
                             className="relative"
                         >
-                            <Link to="/courses" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
-                            Courses
+                            <Link to="/programs" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
+                            Programs
                             <svg className="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -139,9 +139,9 @@ export default function Navbar() {
                                     onMouseEnter={() => handleMouseEnter(setCoursesDropdownOpen)}
                                     onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)}
                                 >
-                                    <li><Link to="/courses/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
-                                    <li><Link to="/courses/AerialDroneCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
-                                    <li><Link to="/courses/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
+                                    <li><Link to="/programs/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
+                                    <li><Link to="/programs/" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
+                                    <li><Link to="/programs/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
                                 
                                 </ul>
                             )}

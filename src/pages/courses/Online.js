@@ -7,7 +7,7 @@ const OnlineCourses = () => {
         <h1 className="text-6xl font-bold text-center mb-8">Online Courses</h1>
         
         <div className="max-w-2xl mx-auto p-6 bg-white flex justify-between">
-            <button className="button-2" onClick={() => navigate("/courses/online/full-vrc-guide")}>The Full VRC Programming Guide</button>
+            <button className="button-2" onClick={() => navigate("/programs/online/full-vrc-guide")}>The Full VRC Programming Guide</button>
             {/* <button className="button-2" onClick={() => navigate("/courses/summer-2024")}>Summer 2024 Courses</button> */}
         </div>
       </div>

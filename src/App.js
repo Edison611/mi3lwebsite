@@ -38,7 +38,7 @@ import Userroles from './pages/admin/UserRoles.js';
 import Donation from './pages/shop/donation.js';
 
 function App() {
-  const fullAccess = true; // Change this line for course content access control
+  const fullAccess = false; // Change this line for course content access control
   return (
     <div className="flex flex-col min-h-screen">
       

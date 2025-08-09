@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import DroneCourseImg from '../../images/FLLSummerCamp.jpeg'
+import FLLImg from '../../images/FLLSummerCamp.jpeg'
 
 const handleYTClick = () => {
     window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');
@@ -19,7 +19,7 @@ const slideImages = [
     '../../images/aerial/4.jpg',
     // Add more image paths as needed
 ];
-export default function AerialDroneCourses() {
+export default function FLLSummerCamp() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
@@ -45,7 +45,7 @@ export default function AerialDroneCourses() {
                 </p>
 
             </div>
-            <img className='cursor-pointer max-w-md h-auto' src={DroneCourseImg} />
+            <img className='cursor-pointer max-w-md h-auto' src={FLLImg} />
         {/* Slideshow Section */}
         <footer>
         <button 

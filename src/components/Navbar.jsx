@@ -29,6 +29,7 @@ export default function Navbar() {
         // { path: "/courses/summer-2024", name: "Summer 2024" },
         { path: "/programs/fllSummerCamp", name: "Aerial Drone Course" },
         { path: "/programs/SummerCourse", name: "2025 Summer Course" },
+        { path: "/programs/iqWorkshop", name: "IQ Workshop" },
     ];
     
     const achievementsLinks = [
@@ -141,6 +142,7 @@ export default function Navbar() {
                                 >
                                     <li><Link to="/programs/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
                                     <li><Link to="/programs/fllSummerCamp" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
+                                    <li><Link to="/programs/iqWorkshop" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">IQ Summer Workshop</Link></li>
                                     <li><Link to="/programs/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
                                 
                                 </ul>

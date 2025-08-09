@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import Courses from './pages/Courses';
 import About from './pages/About';
 import Summer2024Courses from './pages/courses/Summer2024';
-import AerialDroneCourse from './pages/courses/AerialDroneCourse';
+import FLLSummerCamp from './pages/courses/FLLSummerCamp.js';
+import IQWorkshop from './pages/courses/IQWorkshop.js';
 import SummerCourse from './pages/courses/SummerCourse';
 import Timeline from './pages/teams/Timeline';
 import Footer from './components/Footer';
@@ -51,7 +52,8 @@ function App() {
           <Route path="/programs" element={<Courses />} />
           <Route path="/programs/summer-2024" element={<Summer2024Courses />} />
           <Route path="/programs/SummerCourse" element={<SummerCourse />} />
-          <Route path="/programs/fllSummerCamp" element={<AerialDroneCourse />} />
+          <Route path="/programs/fllSummerCamp" element={<FLLSummerCamp />} />
+          <Route path="/programs/iqWorkshop" element={<IQWorkshop />} />
           <Route path="/programs/online" element={<OnlineCourses />} />
           <Route path="/programs/online/full-vrc-guide" element={<Intro />} />
           <Route path='/programs/online/full-vrc-guide/1' element={<Fvg1 />} />

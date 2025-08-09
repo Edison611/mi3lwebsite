@@ -10,6 +10,7 @@ const Courses = () => {
         <div className="max-w-2xl mx-auto p-6 bg-white flex justify-between space-x-4">
             <button className="button-2" onClick={() => navigate("/programs/online")}>Online Courses</button>
             <button className="button-2" onClick={() => navigate("/programs/fllSummerCamp")}>FLL Robotics Summer Camp</button>
+            <button className="button-2" onClick={() => navigate("/programs/iqWorkshop")}>IQ Summer Workshop</button>
             <button className="button-2" onClick={() => navigate("/programs/SummerCourse")}>2025 Summer Course</button>
 
         </div>

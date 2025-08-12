@@ -13,7 +13,8 @@ import i from '../../images/i.png'
 import j from '../../images/j.png'
 import k from '../../images/k.webp'
 import l from '../../images/l.jpg'
-
+import m from '../../images/m.webp'
+import n from '../../images/teams/2055x_team.webp'
 
 const imageMap = {
 a,
@@ -30,7 +31,9 @@ h,
 i,
 j,
 k,
-l
+l,
+m,
+n,
 }
 
 const items = [
@@ -206,6 +209,22 @@ const items = [
         description: "Awards:",
         award1: "   - Design Award (2055X)",
         award2: "   - Think Award (2055A)"
+    },
+    {
+        title: "Gateway to the West VEX V5 Robotics Competition Signature Event",
+        location: "Missisauga ON",
+        date: "January 29-30th, 2025 - Triadelphia WV",
+        imgKey: "m",
+        description: "Awards:",
+        award1: "   - Judges Award (2055X)",
+    },
+    {
+        title: "VEX Robotics World Championship",
+        location: "Missisauga ON",
+        date: "May 9-11th, 2025 - Dallas TX",
+        imgKey: "n",
+        description: "Awards:",
+        award1: "   - Design Award (2055X)",
     },
 ]
 items.reverse()

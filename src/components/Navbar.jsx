@@ -30,11 +30,13 @@ export default function Navbar() {
         { path: "/programs/fllSummerCamp", name: "Aerial Drone Course" },
         { path: "/programs/SummerCourse", name: "2025 Summer Course" },
         { path: "/programs/iqWorkshop", name: "IQ Workshop" },
+        { path: "/programs/speakup", name: "Speak up! Workshop" },
+        { path: "/programs/virtualskills", name: "Virtual Skills Summer Camp" },
     ];
     
     const achievementsLinks = [
         { path: "/teams/timeline", name: "Timeline" },
-        { path: "/teams/achievements", name: "Achievements" },
+        { path: "/teams", name: "Achievements" },
     ];
     const menuLinks = [
         { path: "/", name: "Home" },
@@ -119,7 +121,7 @@ export default function Navbar() {
                                 >
                                     <li><Link to="/contact" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Contact Us</Link></li>
                                     <li><Link to="/teams/timeline" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">History</Link></li>
-                                    <li><Link to="/teams/achievements" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Achievements</Link></li>
+                                    <li><Link to="/teams" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Achievements</Link></li>
                                 </ul>
                             )}
                         </li>
@@ -143,6 +145,8 @@ export default function Navbar() {
                                     <li><Link to="/programs/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
                                     <li><Link to="/programs/fllSummerCamp" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
                                     <li><Link to="/programs/iqWorkshop" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">IQ Summer Workshop</Link></li>
+                                    <li><Link to="/programs/speakup" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Speak up! Workshop</Link></li>
+                                    <li><Link to="/programs/virtualskills" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Virtual Skills Summer Camp</Link></li>
                                     <li><Link to="/programs/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
                                 
                                 </ul>

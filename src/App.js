@@ -7,6 +7,8 @@ import About from './pages/About';
 import Summer2024Courses from './pages/courses/Summer2024';
 import FLLSummerCamp from './pages/courses/FLLSummerCamp.js';
 import IQWorkshop from './pages/courses/IQWorkshop.js';
+import PublicSpeaking from './pages/courses/PublicSpeaking.js';
+import VirtualSkills from './pages/courses/VirtualSkills.js';
 import SummerCourse from './pages/courses/SummerCourse';
 import Timeline from './pages/teams/Timeline';
 import Footer from './components/Footer';
@@ -54,6 +56,8 @@ function App() {
           <Route path="/programs/SummerCourse" element={<SummerCourse />} />
           <Route path="/programs/fllSummerCamp" element={<FLLSummerCamp />} />
           <Route path="/programs/iqWorkshop" element={<IQWorkshop />} />
+          <Route path="/programs/speakup" element={<PublicSpeaking />} />
+          <Route path="/programs/virtualskills" element={<VirtualSkills />} />
           <Route path="/programs/online" element={<OnlineCourses />} />
           <Route path="/programs/online/full-vrc-guide" element={<Intro />} />
           <Route path='/programs/online/full-vrc-guide/1' element={<Fvg1 />} />
@@ -89,7 +93,7 @@ function App() {
           <Route path='/about' element={<About/> }/>
           <Route path="/teams" element={<Teams />} />
           <Route path="/teams/timeline" element={<Timeline />} />
-          <Route path="/teams/achievements" element={<Achievements />} />
+          <Route path="/teams" element={<Achievements />} />
           <Route path="/teams/2055A" element={<teamA />} />
           <Route path="/teams/2055B" element={<teamB />} />
           <Route path="/teams/2055X" element={<teamX />} />

@@ -11,7 +11,7 @@ import RoboticsWorkshops from './pages/courses/RoboticsWorkshops.js';
 import PublicSpeaking from './pages/courses/PublicSpeaking.js';
 import VirtualSkills from './pages/courses/VirtualSkills.js';
 import SummerCourse from './pages/courses/SummerCourse';
-import ScienceFair from './pages/courses/ScienceFair.js';
+import ScienceFair from './pages/courses/ScienceFair';
 import Timeline from './pages/teams/Timeline';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';

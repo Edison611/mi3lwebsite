@@ -27,4 +27,23 @@
     transform: translateY(10px);
     transition: 100ms;
   }
+  .marquee { 
+    z-index: 100;
+    position: relative; 
+  }
+.animate-marquee {
+    position: relative;
+    will-change: transform;
+    display: inline-block;
+    min-width: 100%;
+    animation: marquee 25s linear infinite;
+}
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
   
+/* Ensure marquee and its children allow pointer events */
+.marquee, .animate-marquee, .marquee * {
+    pointer-events: auto !important;
+}

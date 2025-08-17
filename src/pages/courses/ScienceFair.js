@@ -31,7 +31,6 @@ export default function ScienceFair() {
     }, []);
     
     return (
-        <div>
         <div className='flex flex-col items-center space-y-6'>
             <h1 className='text-center font-bold text-5xl mt-8'> Science Fair Preparation Course</h1>
             <div className='text-center px-6'>
@@ -45,11 +44,6 @@ export default function ScienceFair() {
                     Location: 2A-1453 Cornwall Rd Oakville 
                 </p>
             </div>
-
-        </div>
-       
-
-
             <button 
                 className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
                 onClick={handleImgClick} // Add your onClick handler

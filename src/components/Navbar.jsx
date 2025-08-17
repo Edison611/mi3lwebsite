@@ -142,13 +142,40 @@ export default function Navbar() {
                                     onMouseEnter={() => handleMouseEnter(setCoursesDropdownOpen)}
                                     onMouseLeave={() => handleMouseLeave(setCoursesDropdownOpen)}
                                 >
-                                    <li><Link to="/programs/online" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Online Courses</Link></li>
-                                    <li><Link to="/programs/fllSummerCamp" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
-                                    <li><Link to="/programs/iqWorkshop" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">IQ Summer Workshop</Link></li>
-                                    <li><Link to="/programs/speakup" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Speak up! Workshop</Link></li>
-                                    <li><Link to="/programs/virtualskills" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Virtual Skills Summer Camp</Link></li>
-                                    <li><Link to="/programs/SummerCourse" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
-                                
+                                      {/* Course submenu */}
+                            <li className="relative group">
+                                <span className="block px-4 py-2 text-white cursor-pointer group-hover:bg-gray-700">
+                                    Course
+                                <svg className="w-3 h-3 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                                </span>
+                            <ul className="absolute left-full top-0 mt-0 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-50 hidden group-hover:block">
+                                <li><Link to="/programs/online" className="block px-4 py-2 text-white hover:bg-gray-700">Online Courses</Link></li>
+                                <li><Link to="/programs/SummerCourse" className="block px-4 py-2 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
+                            </ul>
+                            </li>
+                                {/* Workshop submenu */}
+                                  <li className="relative group">
+                            <span className="block px-4 py-2 text-white cursor-pointer group-hover:bg-gray-700">
+                                Workshop
+                                <svg className="w-3 h-3 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                            </span>
+                                <ul className="absolute left-full top-0 mt-0 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-50 hidden group-hover:block">
+                                    <li><Link to="/programs/iqWorkshop" className="block px-4 py-2 text-white hover:bg-gray-700">IQ Summer Workshop</Link></li>
+                                    <li><Link to="/programs/speakup" className="block px-4 py-2 text-white hover:bg-gray-700">Speak up! Workshop</Link></li>
+                                </ul>
+                            </li>
+            {/* Camp submenu */}
+                        <li className="relative group">
+                            <span className="block px-4 py-2 text-white cursor-pointer group-hover:bg-gray-700">
+                            Camp
+                            <svg className="w-3 h-3 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                            </span>
+                            <ul className="absolute left-full top-0 mt-0 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-50 hidden group-hover:block">
+                                <li><Link to="/programs/fllSummerCamp" className="block px-4 py-2 text-white hover:bg-gray-700">FLL Robotics Summer Camp</Link></li>
+                                <li><Link to="/programs/virtualskills" className="block px-4 py-2 text-white hover:bg-gray-700">Virtual Skills Summer Camp</Link></li>
+                            </ul>
+                        </li>
+                             
                                 </ul>
                             )}
                         </li>

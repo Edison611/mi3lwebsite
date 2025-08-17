@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import SkillsImg from '../../images/VirtualSkills.webp'
 
-// const handleYTClick = () => {
-//     window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');
-//   };
 
 const handleImgClick = () => {
     window.open(' https://forms.gle/eisNLapUBMVmz6ew6', '_blank', 'noopener,noreferrer');

@@ -35,10 +35,10 @@ export default function ScienceFair() {
             <h1 className='text-center font-bold text-5xl mt-8'> Science Fair Preparation Course</h1>
             <div className='text-center px-6'>
                 <p className='inline'>
-                Mi3L School is offering a Robotics Summer Camp opportunity for Grd 3-8!
+                Mi3L School is offering a two-week-evening Science Fair course for Grd 7-12!
                 </p>
                 <p>
-                    &nbsp; Aug 5 - Aug 8, 1pm - 4pm
+                    &nbsp; Aug 18 - Aug 29, Mon - Fri 7pm - 9pm
                 </p>
                 <p>
                     Location: 2A-1453 Cornwall Rd Oakville 

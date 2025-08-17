@@ -7,9 +7,11 @@ import About from './pages/About';
 import Summer2024Courses from './pages/courses/Summer2024';
 import FLLSummerCamp from './pages/courses/FLLSummerCamp.js';
 import IQWorkshop from './pages/courses/IQWorkshop.js';
+import RoboticsWorkshops from './pages/courses/RoboticsWorkshops.js';
 import PublicSpeaking from './pages/courses/PublicSpeaking.js';
 import VirtualSkills from './pages/courses/VirtualSkills.js';
 import SummerCourse from './pages/courses/SummerCourse';
+import ScienceFair from './pages/courses/ScienceFair.js';
 import Timeline from './pages/teams/Timeline';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
@@ -54,8 +56,10 @@ function App() {
           <Route path="/programs" element={<Courses />} />
           <Route path="/programs/summer-2024" element={<Summer2024Courses />} />
           <Route path="/programs/SummerCourse" element={<SummerCourse />} />
+          <Route path="/programs/ScienceFair" element={<ScienceFair />} />
           <Route path="/programs/fllSummerCamp" element={<FLLSummerCamp />} />
           <Route path="/programs/iqWorkshop" element={<IQWorkshop />} />
+           <Route path="/programs/roboticsWorkshops" element={<RoboticsWorkshops />} />
           <Route path="/programs/speakup" element={<PublicSpeaking />} />
           <Route path="/programs/virtualskills" element={<VirtualSkills />} />
           <Route path="/programs/online" element={<OnlineCourses />} />

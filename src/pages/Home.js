@@ -15,6 +15,16 @@ export default function Home() {
         <div className="font-mono ">
             <div className="Noto+Sans" id='home'>
                 <div className="blurry-background relative">
+                    {/* Announcement Banner */}
+<div className="w-full bg-orange-500 text-white py-4 px-6 flex items-center justify-center shadow-md mt-4 rounded-lg">
+  <span className="font-semibold text-lg md:text-xl mr-2">🚨 Latest Event:</span>
+  <button
+    className="underline font-bold text-lg md:text-xl hover:text-orange-200 transition"
+    onClick={() => navigate('/programs/ScienceFair')}
+  >
+    2025 Science Fair Preparation Course Registration Open!
+  </button>
+</div>
                     <img className="w-full h-64 md:h-96 object-cover blur-sm" src={bg} alt="" />
                     <div className="hero-content absolute inset-0 flex items-center justify-center">
                         <button className="button-learn-more text-xl md:text-4xl">

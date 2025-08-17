@@ -29,7 +29,9 @@ export default function Navbar() {
         // { path: "/courses/summer-2024", name: "Summer 2024" },
         { path: "/programs/fllSummerCamp", name: "Aerial Drone Course" },
         { path: "/programs/SummerCourse", name: "2025 Summer Course" },
+        { path: "/programs/ScienceFair", name: "Science Fair Preparation Course" },
         { path: "/programs/iqWorkshop", name: "IQ Workshop" },
+        { path: "/programs/roboticsWorkshops", name: "Robotics & STEM Workshops" },
         { path: "/programs/speakup", name: "Speak up! Workshop" },
         { path: "/programs/virtualskills", name: "Virtual Skills Summer Camp" },
     ];
@@ -145,29 +147,31 @@ export default function Navbar() {
                                       {/* Course submenu */}
                             <li className="relative group">
                                 <span className="block px-4 py-2 text-white cursor-pointer group-hover:bg-gray-700">
-                                    Course
+                                    Courses
                                 <svg className="w-3 h-3 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                                 </span>
                             <ul className="absolute left-full top-0 mt-0 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-50 hidden group-hover:block">
                                 <li><Link to="/programs/online" className="block px-4 py-2 text-white hover:bg-gray-700">Online Courses</Link></li>
                                 <li><Link to="/programs/SummerCourse" className="block px-4 py-2 text-white hover:bg-gray-700">2025 Summer Course</Link></li>
+                                <li><Link to="/programs/ScienceFair" className="block px-4 py-2 text-white hover:bg-gray-700">Science Fair Preparation Course</Link></li>
                             </ul>
                             </li>
                                 {/* Workshop submenu */}
                                   <li className="relative group">
                             <span className="block px-4 py-2 text-white cursor-pointer group-hover:bg-gray-700">
-                                Workshop
+                                Workshops
                                 <svg className="w-3 h-3 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                             </span>
                                 <ul className="absolute left-full top-0 mt-0 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-50 hidden group-hover:block">
                                     <li><Link to="/programs/iqWorkshop" className="block px-4 py-2 text-white hover:bg-gray-700">IQ Summer Workshop</Link></li>
                                     <li><Link to="/programs/speakup" className="block px-4 py-2 text-white hover:bg-gray-700">Speak up! Workshop</Link></li>
+                                    <li><Link to="/programs/roboticsWorkshops" className="block px-4 py-2 text-white hover:bg-gray-700">Robotics & STEM Workshops</Link></li>
                                 </ul>
                             </li>
             {/* Camp submenu */}
                         <li className="relative group">
                             <span className="block px-4 py-2 text-white cursor-pointer group-hover:bg-gray-700">
-                            Camp
+                            Camps
                             <svg className="w-3 h-3 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                             </span>
                             <ul className="absolute left-full top-0 mt-0 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-50 hidden group-hover:block">

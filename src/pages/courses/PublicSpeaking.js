@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import DroneCourseImg from '../../images/FLLSummerCamp.jpeg'
+import SpeakupImg from '../../images/PublicSpeaking.webp'
 
-const handleYTClick = () => {
-    window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');
-  };
+// const handleYTClick = () => {
+//     window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');
+//   };
 
 const handleImgClick = () => {
-    window.open(' https://forms.gle/EbAEvuaYvkpckJJM6', '_blank', 'noopener,noreferrer');
+    window.open(' https://forms.gle/gG2uFLv28EXK5Z61A', '_blank', 'noopener,noreferrer');
 };
 
 const paymentClick = () => {
-    window.open('https://www.zeffy.com/en-CA/ticketing/fll-robotics-summer-camp-aug-2025-grd-3--8', '_blank', 'noopener,noreferrer');
+    window.open('https://www.zeffy.com/en-CA/ticketing/mi3l-school-summer-public-speaker-workshop--2025', '_blank', 'noopener,noreferrer');
 }
 const slideImages = [
     '../../images/aerial/1.jpg',
@@ -19,7 +19,7 @@ const slideImages = [
     '../../images/aerial/4.jpg',
     // Add more image paths as needed
 ];
-export default function AerialDroneCourses() {
+export default function PublicSpeaking() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
@@ -32,21 +32,27 @@ export default function AerialDroneCourses() {
     
     return (
         <div className='flex flex-col items-center space-y-6'>
-            <h1 className='text-center font-bold text-5xl mt-8'> FLL Robotics Summer Camp</h1>
+            <h1 className='text-center font-bold text-5xl mt-8'>Speak up! Workshop</h1>
             <div className='text-center px-6'>
                 <p className='inline'>
-                Mi3L School is offering a Robotics Summer Camp opportunity for Grd 3-8!
+                Mi3L School is offering a public speaking workshop for ages 9-14!                
                 </p>
                 <p>
-                    &nbsp; Aug 5 - Aug 8, 1pm - 4pm
+                 Aug 11th, 13th, 15th, 17th: 7-9pm
                 </p>
+
                 <p>
                     Location: 2A-1453 Cornwall Rd Oakville 
                 </p>
 
             </div>
-            <img className='cursor-pointer max-w-md h-auto' src={DroneCourseImg} />
-        {/* Slideshow Section */}
+            <button 
+        className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
+        onClick={handleImgClick} // Add your onClick handler
+    >
+        Reserve a Spot
+    </button>
+            <img className='cursor-pointer' src={SpeakupImg} onClick={handleImgClick} />
         <footer>
         <button 
         className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'

@@ -41,7 +41,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx';
 import ProtectedAccessRoute from './components/ProtectedAccessRoute.jsx';
 import Userroles from './pages/admin/UserRoles.js';
 import Donation from './pages/shop/donation.js';
-
+import Volunteer from './pages/Volunteer';
 function App() {
   const fullAccess = true; // Change this line for course content access control
   return (
@@ -107,6 +107,7 @@ function App() {
           <Route path='/admin' element={<ProtectedRoute element={<Admin />}/>} />
           <Route path='/admin/user-roles' element={<ProtectedRoute element={<Userroles />}/>} />
           <Route path='/admin/createcourse' element={<ProtectedRoute element={<Createcourses />}/>} />
+          <Route path="/volunteer" element={<Volunteer />} />
         </Routes>
       </div>
       </UserProvider>

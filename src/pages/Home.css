@@ -28,7 +28,10 @@
     transition: 100ms;
   }
   .marquee { 
-    z-index: 100;
+    z-index: 1;
+    height: 2.5em;
+    overflow: hidden;
+    background: inherit;;
     position: relative; 
   }
 .animate-marquee {

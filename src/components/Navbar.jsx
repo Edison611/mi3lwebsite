@@ -12,7 +12,7 @@ export default function Navbar() {
     const [isAchievementsDropdownOpen, setAchievementsDropdownOpen] = useState(false);
     const [hoverTimeout, setHoverTimeout] = useState(null);
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+    const [isJobDropdownOpen, setJobDropdownOpen] = useState(false);
     const handleMouseEnter = (setDropdownOpen) => {
         if (hoverTimeout) clearTimeout(hoverTimeout);
         setDropdownOpen(true);
@@ -191,11 +191,28 @@ export default function Navbar() {
                         <li>
                             <Link to="/donation" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Donate</Link>
                         </li>
-                        <li>
-                        <Link to="/volunteer" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
-                            Volunteer with Us
-                            </Link>
-                        </li>
+                        <li
+  onMouseEnter={() => handleMouseEnter(setJobDropdownOpen)}
+  onMouseLeave={() => handleMouseLeave(setJobDropdownOpen)}
+  className="relative"
+>
+  <span className="text-xl block py-2 px-3 text-gray-900 rounded cursor-pointer hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">
+    Job
+    <svg className="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </span>
+  {isJobDropdownOpen && (
+    <ul className="absolute top-full left-0 mt-0 w-48 border border-gray-200 rounded-md shadow-lg bg-gray-800 border-gray-700 z-50">
+      <li>
+        <Link to="/volunteer" className="block px-4 py-2 text-white hover:bg-gray-700">
+          Volunteer
+        </Link>
+      </li>
+      {/* Add more job-related submenu items here if needed */}
+    </ul>
+  )}
+</li>
                        {user && <li>
                             <Link to="/profile" className="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 text-white md:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent" aria-current="page">Profile</Link>
                         </li>}

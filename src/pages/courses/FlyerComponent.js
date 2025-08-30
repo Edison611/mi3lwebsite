@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Main component for the flyer
-const PublicSpeaking = () => {
+const FlyerComponent = () => {
     // Main container style
     const flyerStyle = {
         fontFamily: 'Arial, sans-serif',
@@ -115,4 +115,4 @@ const PublicSpeaking = () => {
     );
 };
 
-export default PublicSpeaking;
+export default FlyerComponent;

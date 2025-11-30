@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SkillsImg from '../../images/VirtualSkills.webp'
+import SkillsImg from '../../images/NA.webp'
 
 
 const handleImgClick = () => {

@@ -27,13 +27,13 @@ export default function Navbar() {
     const coursesLinks = [
         { path: "/programs/online", name: "Online Courses" },
         // { path: "/courses/summer-2024", name: "Summer 2024" },
-        { path: "/programs/fllSummerCamp", name: "Aerial Drone Course" },
+       // { path: "/programs/fllSummerCamp", name: "Aerial Drone Course" },
         { path: "/programs/SummerCourse", name: "2025 Summer Course" },
         { path: "/programs/ScienceFair", name: "Science Fair Preparation Course" },
         { path: "/programs/iqWorkshop", name: "IQ Workshop" },
         { path: "/programs/roboticsWorkshops", name: "Robotics & STEM Workshops" },
         { path: "/programs/speakup", name: "Speak up! Workshop" },
-        { path: "/programs/virtualskills", name: "Virtual Skills Summer Camp" },
+      //  { path: "/programs/virtualskills", name: "Virtual Skills Summer Camp" },
     ];
     
     const achievementsLinks = [

@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-import IQImg from '../../images/IQImg.png'
+import IQImg from '../../images/NA.webp'
 
-// const handleYTClick = () => {
-//     window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');
-//   };
 
 const handleImgClick = () => {
     window.open(' https://forms.gle/xXMQscQuErc4UFr8A', '_blank', 'noopener,noreferrer');

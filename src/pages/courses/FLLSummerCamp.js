@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import FLLImg from '../../images/FLLSummerCamp.jpeg'
+import FLLImg from '../../images/NA.webp'
 
 const handleYTClick = () => {
     window.open('https://youtu.be/nitDt76IX3k', '_blank', 'noopener,noreferrer');

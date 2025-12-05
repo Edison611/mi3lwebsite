@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
 import Courses from './pages/Courses';
 import About from './pages/About';
 import Summer2024Courses from './pages/courses/Summer2024';
@@ -104,6 +105,7 @@ function App() {
           <Route path="/teams/2055A" element={<teamA />} />
           <Route path="/teams/2055B" element={<teamB />} />
           <Route path="/teams/2055X" element={<teamX />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Shop />} />
           <Route path="/donation" element={<Donation />} />

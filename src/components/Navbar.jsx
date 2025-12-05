@@ -121,7 +121,7 @@ export default function Navbar() {
                                     onMouseEnter={() => handleMouseEnter(setAchievementsDropdownOpen)}
                                     onMouseLeave={() => handleMouseLeave(setAchievementsDropdownOpen)}
                                 >
-                                    <li><Link to="/contact" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Contact Us</Link></li>
+                                    <li><Link to="/contact" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">About Us</Link></li>
                                     <li><Link to="/teams/timeline" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">History</Link></li>
                                     <li><Link to="/teams" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 text-white hover:bg-gray-700">Achievements</Link></li>
                                 </ul>

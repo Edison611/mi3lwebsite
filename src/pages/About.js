@@ -10,7 +10,7 @@ const About = () => {
         <div className="max-w-2xl mx-auto p-6 bg-white flex justify-between">
           <button className="button-2" onClick={() => navigate("/teams")}>Achievements</button>
           <button className="button-2" onClick={() => navigate("/teams/timeline")}>History</button>
-          <button className="button-2" onClick={() => navigate("/contact")}>Contact Us</button>
+          <button className="button-2" onClick={() => navigate("/contact")}>About Us</button>
         </div>
       </div>
     );

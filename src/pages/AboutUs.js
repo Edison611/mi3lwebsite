@@ -1,5 +1,3 @@
-// ...existing code...
-import React from "react";
 import "./buttons.css";
 import { useNavigate } from "react-router-dom";
 import coach1 from "../images/coaches/coach1.jpeg";
@@ -10,10 +8,10 @@ import teamA_logo from "../images/teams/2055A_logo.png";
 import teamA_photo from "../images/teams/2055a_team.jpg";
 import teamX_logo from "../images/teams/2055X_logo.webp";
 import teamX_photo from "../images/teams/2055X.JPG";
-import teamC_logo from "../images/teams/2055C_logo.png";
+import teamC_logo from "../images/teams/2055C_logo.png"; // adjust filename if different
 import teamC_photo from "../images/teams/2055c_team.jpg";
 
-const Contact = () => {
+const About = () => {
   const navigate = useNavigate();
 
   const coaches = [
@@ -61,7 +59,7 @@ const Contact = () => {
         <button className="button-2" onClick={() => navigate("/teams/timeline")}>
           History
         </button>
-        <button className="button-2" onClick={() => navigate("/contact")}>About Us</button>
+        <button className="button-2" onClick={() => navigate("/contact")}>Contact Us</button>
       </div>
 
       <section className="bg-white p-6 rounded-lg shadow-sm">
@@ -115,18 +113,8 @@ const Contact = () => {
           ))}
         </div>
       </section>
-
-      {/* Contact info at bottom */}
-      <section className="mt-8 bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
-        <p className="text-lg leading-relaxed">You can contact us at:</p>
-        <ul className="mt-5">
-          <li className="text-lg leading-relaxed">Email: mi3lschool@gmail.com</li>
-          <li className="text-lg leading-relaxed">Phone: 416-523-5965</li>
-        </ul>
-      </section>
     </div>
   );
 };
 
-export default Contact;
+export default About;
